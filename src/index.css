@@ -233,22 +233,6 @@ color: white;
 
 }
 
-.parent{
-
-background-color: #0f88fa !important ;
-position: absolute !important; 
-top: 0 !important;
-right: 0 !important;
-}
-.child{
-
-background-color: #0ffa69 !important ;
-position: absolute !important;
-bottom: 0 !important;
-right: 0 !important;
-z-index: 233123;
-}
-
 
 
 /*fayyad btn */
@@ -263,7 +247,7 @@ z-index: 233123;
 .button {
   --border-right: 6px;
   --text-stroke-color: rgba(255,255,255,0.6);
-  --animation-color: #0f88fa;
+  /* --main-color: #0f88fa; */
   --fs-size: 2em;
   letter-spacing: 3px;
   text-decoration: none;
@@ -279,22 +263,41 @@ z-index: 233123;
   position: absolute;
   box-sizing: border-box;
   content: attr(data-text);
-  color: var(--animation-color);
+  color: var(--main-color);
   width: 0%;
   inset: 0;
-  border-right: var(--border-right) solid var(--animation-color);
+  border-right: var(--border-right) solid var(--main-color);
   overflow: hidden;
   transition: 0.5s;
-  -webkit-text-stroke: 1px var(--animation-color);
+  -webkit-text-stroke: 1px var(--main-color);
 }
 /* hover */
 .button:hover .hover-text {
   width: 100%;
-  filter: drop-shadow(0 0 23px var(--animation-color))
+  filter: drop-shadow(0 0 23px var(--main-color))
 }
 /*  */
 
+.myimgdiv{
+  width: 400px;
+  height: 400px;
+  background-color: var(--main-color);
+  overflow: hidden;
+  filter: blur(100px);
+}
+.myimg img{
+  filter: drop-shadow(0px 0px 50px rgb(165, 194, 235));
 
+}
+.myimg{
+  width: 400px;
+  height: 400px;
+  background-color: var(--main-color);
+  overflow: hidden;
+}
+.about .myimgcontainer{
+  display: none !important;
+}
 
 @media screen and (max-width: 600px) {
   .home .col-md-4{
@@ -311,8 +314,18 @@ z-index: 233123;
 }
 .container{
   width: 100% !important;
-  /* padding: 0 !important; */
-  /* margin: 0 !important; */
+
+}
+.contact h1{
+  font-size: 30px !important;
+}
+
+.myimg{
+  width:150px;
+  height: 150px;
+}
+.about .myimgcontainer{
+  display: flex !important;
 }
 
 }
