@@ -24,7 +24,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="col-md-7 ms-auto  p-md-5 p-3  d-flex justify-content-center flex-column align-items-start">
+          <div className="col-md-7 ms-auto  p-md-5 ps-3  d-flex justify-content-center flex-column align-items-start">
             <h2 className="fw-bold home-h2 ">
               {" "}
               I'M Mohammed Hossam.{" "}

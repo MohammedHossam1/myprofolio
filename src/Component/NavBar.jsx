@@ -66,9 +66,9 @@ export default function NavBar() {
         </ul>
       </div>
 
-      <div className="position-fixed  d-flex justify-content-between align-items-center px-md-3 top-0 start-0  pt-2 w-100">
+      <div className="position-fixed  d-flex justify-content-between align-items-center px-md-3 top-0 start-0  p-2 pt-3 w-100">
         <div className="logo  ">
-          <h2 class="button" data-text="Awesome">
+          <h2 class="button " data-text="Awesome">
             <span class="actual-text">&nbsp;FAYYAD&nbsp;</span>
             <span aria-hidden="true" class="hover-text">
               &nbsp;FAYYAD&nbsp;
