@@ -18,12 +18,13 @@ export default function Home() {
             </div>
             <div className="  top-50 translate-middle-y  d-flex position-absolute align-items-center ">
               <div className=" myimg rounded-circle">
+                
                 <img src={isHovered?co:mo}   onMouseOver={() => setIsHovered(true)}
                  onMouseOut={() => setIsHovered(false)} alt="" className="w-100 ps-4 rounded-circle " id="myImage" />
               </div>
             </div>
           </div>
-          <div className="col-md-7 ms-auto  p-5 d-flex justify-content-center flex-column align-items-start">
+          <div className="col-md-7 ms-auto  p-md-5 p-3  d-flex justify-content-center flex-column align-items-start">
             <h2 className="fw-bold home-h2 ">
               {" "}
               I'M Mohammed Hossam.{" "}

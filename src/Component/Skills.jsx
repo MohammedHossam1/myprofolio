@@ -14,9 +14,9 @@ export default function Skills() {
   return (
     <div className="skills py-5">
       <div className=" my-5">
-        <h4 className="text-center fw-bold fa-3x">
+        <h1 className="text-center fw-bold fa-3x">
           <span className="skill-span">MY</span>SKILLS
-        </h4>
+        </h1>
         <div className="row d-flex justify-content-center w-100">
           <div className="col-md-2 col-6  d-flex justify-content-center flex-column align-items-center">
             <div className="border m-1 rounded-2 ">

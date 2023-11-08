@@ -1,16 +1,22 @@
-import React, { useEffect } from "react";
-import WOW from "wowjs";
-import 'animate.css'
-
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
 export default function Contact() {
-  useEffect(() => {
-    const wow = new WOW.WOW()
-    wow.init();
-  }, []);
+  const form = useRef();
+function sendEmail(e){
+    e.preventDefault();
+
+    emailjs.sendForm('service_9iwsj35', 'template_smnyzks', form.current, '1mJgzsdbgrEobslUK')
+    .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+}
   return (
     <div className="contact py-5">
 
-       <h1 className="text-center wow fadeIn my-4 fw-bold fa-3x" data-wow-duration="2s" data-wow-delay="1s">
+       <h1 className="text-center  my-4 fw-bold fa-3x" data-wow-duration="2s" data-wow-delay="1s">
         GETIN<span>TOUCH</span>{" "}
       </h1>
       <div className="row">
@@ -36,7 +42,7 @@ export default function Contact() {
                 <h6 className="">+0201125997082</h6>
               </div>
             </div>
-            <div className="social wow bounceInUp mt-1 d-flex  align-items-center ">
+            <div className="social  mt-1 d-flex  align-items-center ">
               <a
                 href="https://www.facebook.com/muhamedhoss"
                 target="_blank"
@@ -45,18 +51,18 @@ export default function Contact() {
                 <i className="fa-brands fa-larger text-white fa-facebook-f"></i>
               </a>
               <a
-                href=""
+                href="https://github.com/MohammedHossam1"
                 target="_blank"
                 className="rounded-circle d-flex justify-content-center align-items-center mx-2"
               >
                 <i className="fa-brands fa-larger text-white fa-github"></i>
               </a>
               <a
-                href=""
+                href="https://www.linkedin.com/in/mohammed-hossam-459b68291/"
                 target="_blank"
                 className="rounded-circle d-flex justify-content-center align-items-center mx-2"
               >
-                <i className="fa-brands fa-larger text-white fa-instagram"></i>
+                <i className="fa-brands fa-larger text-white fa-linkedin-in"></i>
               </a>
               <a
                 href=""
@@ -69,12 +75,28 @@ export default function Contact() {
           </div>
         </div>
         <div className="col-md-7 mt-2 mt-md-5 ">
+        <form ref={form} onSubmit={sendEmail}>
+
           <div className="row">
             <div className="col-md-4">
             <input
               type="text"
               className=" py-2 my-2 form-control rounded-5"
-              placeholder="NAME"
+              placeholder="name"
+              id="name"
+              name="name"
+              />
+          </div>
+
+            <div className="col-md-4">
+
+            <input
+              type="text"
+              className=" py-2 my-2 form-control rounded-5"
+              placeholder="email"
+              id="email"
+              name="email"
+
             />
           </div>
 
@@ -83,39 +105,33 @@ export default function Contact() {
             <input
               type="text"
               className=" py-2 my-2 form-control rounded-5"
-              placeholder="EMAIL"
-
-            />
-          </div>
-
-            <div className="col-md-4">
-
-            <input
-              type="text"
-              className=" py-2 my-2 form-control rounded-5"
-              placeholder="SUBJECT"
+              placeholder="subject"
+              id="subject"
+              name="subject"
       
               
             />
           </div>
 
 <div className="col-md-12">
-<textarea className="form-control  rounded-5  p-md-3 my-2 my-md-4" placeholder="Your message" cols="20" rows="6"></textarea>
+<textarea className="form-control  rounded-5  p-md-3 my-2 my-md-4" placeholder="Your message" name="message" cols="20" rows="6"></textarea>
 
 </div>
           
 
-          <a
+          <button
             
             class="bttn mx-2 w-auto ps-3 my-4  d-flex justify-content-between rounded-5 align-items-center p-0"
-            href="Resume.pdf"
+          
+            type="submit"
           >
             SEND MESSAGE
             <div className="home-ic   rounded-5 d-flex justify-content-center align-items-center ms-2 ">
               <i className="fas text-white fa-2x  fa-arrow-right "></i>
             </div>
-          </a>
+          </button>
         </div>
+        </form>
         </div>
       </div> 
     </div>

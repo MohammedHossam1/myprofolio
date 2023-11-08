@@ -13,9 +13,9 @@ export default function About() {
   return (
     <section className="about  py-5">
       <div className="  text-center mt-3">
-        <h2>
+        <h1>
           ABOUT<span className="about-span">ME</span>
-        </h2>
+        </h1>
         <div className=" w-100 justify-content-center myimgcontainer  d-flex  align-items-center ">
           <div className=" myimg rounded-circle">
             <img
@@ -30,17 +30,17 @@ export default function About() {
         </div>
 
 
-        <div className="row ms-2">
-          <div className="col-md-6   ms-auto ">
+        <div className="row position-relative ">
+          <div className="col-md-7   ">
             <h4 className="text-start mt-5 fw-bold"> PERSONAL INFOS</h4>
             <div className="row">
-              <div className="col-md-4 ">
+              <div className="col-lg-5 ">
                 <div className="d-flex flex-column align-items-start">
                   <h5 className="my-3">
                     First name : <span>Mohammed</span>
                   </h5>
                   <h5 className="my-3">
-                    Last name : <span>Hossam</span>
+                    Address : <span>Egypt-Giza</span>
                   </h5>
                   <h5 className="my-3">
                     Age : <span>25</span>
@@ -48,18 +48,24 @@ export default function About() {
                   <h5 className="my-3">
                     Military : <span>Completed</span>
                   </h5>
+           
                 </div>
               </div>
-              <div className="col-md-7 ">
+              <div className="col-md-7">
                 <div className="d-flex flex-column align-items-start">
-                  <h5 className="my-3">
-                    Address : <span>Egypt-Giza</span>
+                <h5 className="my-3">
+                    Last name : <span>Hossam</span>
                   </h5>
+                
                   <h5 className="my-3">
                     Phone : <span>+201125997082</span>
                   </h5>
                   <h5 className="my-3">
-                    Email : <span>mohammedhossam199998@gmail</span>
+                  Marital status : <span>Single</span>
+                  </h5>
+                  <h5 className="my-3 d-flex flex-md-row flex-column text-start flex-wrap ">
+                   <h5 className=""> Email :</h5>
+                    <span className=""> mohammedhossam199998@gmail</span>
                   </h5>
                 </div>
               </div>
@@ -76,8 +82,8 @@ export default function About() {
             </div>
           </div>
 
-          <div className="col-md-5 text-start   ">
-            <h4 className="text-start mt-5 fw-bold ">EDUCATION</h4>
+          <div className="col-md-5  education text-start   ">
+            <h4 className="text-start ps-3 mt-5 fw-bold ">EDUCATION</h4>
             <h5 className="h3 mb-5 mt-3  text-white">
               - Faculty of Commerce{" "}
               <span className="text-secondary mx-2">2017-2020</span>

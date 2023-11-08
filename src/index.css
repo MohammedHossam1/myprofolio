@@ -47,6 +47,13 @@ li {
 }
 
 /* nav */
+.navBar{
+  position:fixed;
+   z-index: 3 ;
+    bottom:0;
+     top:0;
+      right: 0; 
+}
 .nav-ic {
   width: 45px;
   height: 45px;
@@ -120,12 +127,12 @@ a:hover.nav-text {
 
 
 /* about */
-.about h2{
+.about h1{
   font-weight: 700;
   font-size: 50px !important;
 }
 .about h5{
-  font-size: 15px;
+  font-size: 20px;
   color: #a5a4a4;
 }
 .about span{
@@ -135,7 +142,9 @@ a:hover.nav-text {
   color: var(--main-color) !important;
 
 }
-
+.email{
+  font-size: 14px !important;
+}
 .m {
   width: 100%;
   height: 100%;
@@ -147,6 +156,18 @@ a:hover.nav-text {
 
 .container{
   z-index: 2 !important;
+}
+
+.education::before{
+  content: '';
+  width: 1px;
+  height: 70%;
+background-color: #ffffff;
+position: absolute;
+/* top: 50%; */
+margin-top: 50px;
+margin-right: 50px;
+
 }
 
 .logo{
@@ -258,6 +279,7 @@ color: white;
   color: transparent;
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
+
 /* this is the text, when you hover on button */
 .hover-text {
   position: absolute;
@@ -327,5 +349,20 @@ color: white;
 .about .myimgcontainer{
   display: flex !important;
 }
+.education::before{
+  content: '';
+  height: 30%;
+}
+
+
+.navBar{
+  position: fixed;
+  right: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  top:95%;
+  height: 40px !important;
+}
+
 
 }

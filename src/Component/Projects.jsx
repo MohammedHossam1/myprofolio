@@ -8,9 +8,7 @@ import bakery from "../assets/projects/bakery.png";
 import bookmarker from "../assets/projects/bookmarker.png";
 
 export default function Projects() {
-  window.addEventListener('load',()=>{
 
-  })
   return (
     <div className="projects py-5">
       <div className=" my-4">
@@ -23,7 +21,7 @@ export default function Projects() {
               <div className="layer w-100 h-100 d-flex flex-column justify-content-center position-absolute ">
                 <h2 className="text-center fw-bold">E-Commerce</h2>
                 <div className=" d-flex  justify-content-center">
-                  <a className="btn px-5  mx-1  codeBtn" href="https://github.com/MohammedHossam1/ECommercy" target="_blank">CODE</a>
+                  <a className="btn px-5  mx-1  codeBtn" href="https://e-commercy.vercel.app/" target="_blank">CODE</a>
                   <a className="btn px-5 mx-1 demoBtn" href="https://mohammedhossam1.github.io/ECommercy/" target="_blank">DEMO</a>
                 </div>
               </div>
