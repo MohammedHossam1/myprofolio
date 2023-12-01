@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import WOW from "wowjs";
-import mo from "../assets/bg.png";
+import mo from "../assets/bg.jpg";
 import co from "../assets/image.png";
 
 export default function About() {
   const [isHovered, setIsHovered] = useState(false);
 
-  useEffect(() => {
-    const wow = new WOW.WOW();
-    wow.init();
-  }, []);
+
   return (
     <section className="about  py-5">
+      <h1 className="position-absolute mobheadline end-0 top-0 m-3" >
+          ABOUT<span className=" about-span">ME</span>
+        </h1>
       <div className="  text-center mt-3">
-        <h1>
-          ABOUT<span className="about-span">ME</span>
+        <h1 className="bigheadline" >
+          ABOUT<span className=" about-span">ME</span>
         </h1>
         <div className=" w-100 justify-content-center myimgcontainer  d-flex  align-items-center ">
           <div className=" myimg rounded-circle">
@@ -23,7 +23,7 @@ export default function About() {
               onMouseOver={() => setIsHovered(true)}
               onMouseOut={() => setIsHovered(false)}
               alt=""
-              className="w-100 ps-4 rounded-circle "
+              className="w-100  rounded-circle "
               id="myImage"
             />
           </div>
@@ -32,9 +32,9 @@ export default function About() {
 
         <div className="row position-relative ">
           <div className="col-md-7   ">
-            <h4 className="text-start mt-5 fw-bold"> PERSONAL INFOS</h4>
-            <div className="row">
-              <div className="col-lg-5 ">
+            <h4 className="text-start mt-5 fw-bold ps-3 "> PERSONAL INFOS</h4>
+            <div className="row  ps-3">
+              <div className="col-lg-5  ">
                 <div className="d-flex flex-column align-items-start">
                   <h5 className="my-3">
                     First name : <span>Mohammed</span>
@@ -82,7 +82,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="col-md-5  education text-start   ">
+          <div className="col-md-5  education text-start  ps-3 ">
             <h4 className="text-start ps-3 mt-5 fw-bold ">EDUCATION</h4>
             <h5 className="h3 mb-5 mt-3  text-white">
               - Faculty of Commerce{" "}

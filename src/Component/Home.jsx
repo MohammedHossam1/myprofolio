@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import mo from "../assets/bg.png";
+import mo from "../assets/bg.jpg";
 import co from "../assets/image.png";
 import { Link } from "react-router-dom";
 export default function Home() {
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
 
 
 
@@ -19,8 +19,8 @@ export default function Home() {
             <div className="  top-50 translate-middle-y  d-flex position-absolute align-items-center ">
               <div className=" myimg rounded-circle">
                 
-                <img src={isHovered?co:mo}   onMouseOver={() => setIsHovered(true)}
-                 onMouseOut={() => setIsHovered(false)} alt="" className="w-100 ps-4 rounded-circle " id="myImage" />
+                <img src={mo}  
+                 alt="" className="w-100 rounded-circle " id="myImage" />
               </div>
             </div>
           </div>
@@ -31,7 +31,7 @@ export default function Home() {
               <span className="text-white ">Frontend developer</span>
             </h2>
             <p className="home-p">
-              I'm a Egyption based front-end developer focused on crafting clean
+              I'm an Egyption based front-end developer focused on crafting clean
               & user-friendly experiences, I am passionate about building
               excellent software that improves the lives of those around me.
             </p>

@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
     <NavBar/>
-    <div className='container'>
+    <div className='container ' >
     <Routes>
       <Route path='/' exact element={<Home />}/>
       <Route path='/about' exact element={<About />}/>

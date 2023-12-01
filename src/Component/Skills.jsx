@@ -13,8 +13,11 @@ import github from "../assets/git.png";
 export default function Skills() {
   return (
     <div className="skills py-5">
+       <h1 className="position-absolute m-3 z-3 top-0 end-0 mobheadline text-center fw-bold fa-3x ">
+        <span className="proj-span">MY</span>SKILLS
+      </h1>
       <div className=" my-5">
-        <h1 className="text-center fw-bold fa-3x">
+        <h1 className="text-center bigheadline fw-bold fa-3x">
           <span className="skill-span">MY</span>SKILLS
         </h1>
         <div className="row d-flex justify-content-center w-100">

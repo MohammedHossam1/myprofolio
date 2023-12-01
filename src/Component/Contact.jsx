@@ -1,29 +1,40 @@
-import React, { useRef } from 'react';
-import emailjs from 'emailjs-com';
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
 export default function Contact() {
   const form = useRef();
-function sendEmail(e){
+  function sendEmail(e) {
     e.preventDefault();
 
-    emailjs.sendForm('service_9iwsj35', 'template_smnyzks', form.current, '1mJgzsdbgrEobslUK')
-    .then((result) => {
+    emailjs
+      .sendForm(
+        "service_9iwsj35",
+        "template_smnyzks",
+        form.current,
+        "1mJgzsdbgrEobslUK"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
-
-}
+        }
+      );
+  }
   return (
     <div className="contact py-5">
-
-       <h1 className="text-center  my-4 fw-bold fa-3x" data-wow-duration="2s" data-wow-delay="1s">
+      <h1 className="position-absolute fw-bold mobheadline end-0 top-0 m-3">
+      GETIN<span className=" about-span">TOUCH</span>
+      </h1>
+      <h1
+        className="text-center bigheadline  my-4 fw-bold fa-3x"  >
         GETIN<span>TOUCH</span>{" "}
       </h1>
       <div className="row">
-        <div className="col-md-4">
-          <div className=" ms-md-5 mt-md-5">
+        <div className="col-md-4 ">
+          <div className=" ms-md-5 mt-5 mb-3">
             <h2 className="fw-bold fa-md-2x">DON'T BE SHY !</h2>
-            <p className="lead fa-1x ">
+            <p className="lead p-3  ">
               Feel free to get in touch with me. I am always open to discussing
               new projects, creative ideas or opportunities to be part of your
               visions.
@@ -75,65 +86,61 @@ function sendEmail(e){
           </div>
         </div>
         <div className="col-md-7 mt-2 mt-md-5 ">
-        <form ref={form} onSubmit={sendEmail}>
+          <form ref={form} onSubmit={sendEmail}>
+            <div className="row">
+              <div className="col-md-4">
+                <input
+                  type="text"
+                  className=" py-2 my-2 form-control rounded-5"
+                  placeholder="name"
+                  id="name"
+                  name="name"
+                />
+              </div>
 
-          <div className="row">
-            <div className="col-md-4">
-            <input
-              type="text"
-              className=" py-2 my-2 form-control rounded-5"
-              placeholder="name"
-              id="name"
-              name="name"
-              />
-          </div>
+              <div className="col-md-4">
+                <input
+                  type="text"
+                  className=" py-2 my-2 form-control rounded-5"
+                  placeholder="email"
+                  id="email"
+                  name="email"
+                />
+              </div>
 
-            <div className="col-md-4">
+              <div className="col-md-4">
+                <input
+                  type="text"
+                  className=" py-2 my-2 form-control rounded-5"
+                  placeholder="subject"
+                  id="subject"
+                  name="subject"
+                />
+              </div>
 
-            <input
-              type="text"
-              className=" py-2 my-2 form-control rounded-5"
-              placeholder="email"
-              id="email"
-              name="email"
+              <div className="col-md-12">
+                <textarea
+                  className="form-control  rounded-5  p-md-3 my-2 my-md-4"
+                  placeholder="Your message"
+                  name="message"
+                  cols="20"
+                  rows="6"
+                ></textarea>
+              </div>
 
-            />
-          </div>
-
-            <div className="col-md-4">
-
-            <input
-              type="text"
-              className=" py-2 my-2 form-control rounded-5"
-              placeholder="subject"
-              id="subject"
-              name="subject"
-      
-              
-            />
-          </div>
-
-<div className="col-md-12">
-<textarea className="form-control  rounded-5  p-md-3 my-2 my-md-4" placeholder="Your message" name="message" cols="20" rows="6"></textarea>
-
-</div>
-          
-
-          <button
-            
-            class="bttn mx-2 w-auto ps-3 my-4  d-flex justify-content-between rounded-5 align-items-center p-0"
-          
-            type="submit"
-          >
-            SEND MESSAGE
-            <div className="home-ic   rounded-5 d-flex justify-content-center align-items-center ms-2 ">
-              <i className="fas text-white fa-2x  fa-arrow-right "></i>
+              <button
+                class="bttn mx-2 w-auto ps-3 my-4  d-flex justify-content-between rounded-5 align-items-center p-0"
+                type="submit"
+              >
+                SEND MESSAGE
+                <div className="home-ic   rounded-5 d-flex justify-content-center align-items-center ms-2 ">
+                  <i className="fas text-white fa-2x  fa-arrow-right "></i>
+                </div>
+              </button>
             </div>
-          </button>
+          </form>
         </div>
-        </form>
-        </div>
-      </div> 
+      </div>
     </div>
   );
 }
