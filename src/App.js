@@ -9,6 +9,7 @@ import Contact from './Component/Contact';
 import Skills from './Component/Skills';
 
 function App() {
+  
    
   return (
     <BrowserRouter>

@@ -275,10 +275,10 @@ color: white;
   --border-right: 6px;
   --text-stroke-color: rgba(255,255,255,0.6);
   /* --main-color: #0f88fa; */
-  --fs-size: 2em;
+  
   letter-spacing: 3px;
   text-decoration: none;
-  font-size: var(--fs-size);
+  font-size: 30px;
   font-family: "Arial";
   position: relative;
   text-transform: uppercase;
@@ -344,9 +344,7 @@ color: white;
   width: 100% !important;
 
 }
-.contact h1{
-  font-size: 30px !important;
-}
+
 .myimg{
   width:150px;
   height: 150px;
@@ -377,7 +375,7 @@ transform: translateY(-100%);
   }
   .mobheadline{
     display: block ;
-    font-size: 30px !important;
+    font-size: 27px !important;
 
   }
   .contact h2{
@@ -385,14 +383,22 @@ display: none;
   }
   
   .contact p{
-    font-size: 20px;
+    /* font-size: 20px;
     border: 1px solid gray;
+    padding: 10px 0px 10px 10px ; */
+    display: none;
       }
      .contact .col-md-4{
         margin: 10px 0px;
       }
-     .contact .col-md-7{
-        margin: 50px 0px !important;
-      }
+ .contact button{
+  margin-left: 2rem !important;
+ }
+ .contact .social{
+  margin: 1rem 1rem 1rem 0rem !important;
+ }
+ .button {
+  font-size: 27px;
+ }
 
 }

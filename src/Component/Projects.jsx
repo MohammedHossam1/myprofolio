@@ -6,10 +6,16 @@ import protofolio from "../assets/projects/protofolio.png";
 import meals from "../assets/projects/meals.png";
 import bakery from "../assets/projects/bakery.png";
 import bookmarker from "../assets/projects/bookmarker.png";
+import { useEffect } from 'react';
+import WOW from 'wowjs'
 
 export default function Projects() {
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
+
   return (
-    <div className="projects py-5">
+    <div className="projects wow fadeIn py-5">
       <h1 className="position-absolute z-3  m-3 top-0 end-0 mobheadline text-center fw-bold fa-3x ">
             <span className="proj-span">MY</span>PROJECTS
           </h1>

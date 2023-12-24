@@ -5,7 +5,11 @@ import co from "../assets/image.png";
 
 export default function About() {
   const [isHovered, setIsHovered] = useState(false);
-
+  
+    useEffect(() => {
+      new WOW.WOW().init();
+    }, []);
+  
 
   return (
     <section className="about  py-5">
@@ -13,7 +17,7 @@ export default function About() {
           ABOUT<span className=" about-span">ME</span>
         </h1>
       <div className="  text-center mt-3">
-        <h1 className="bigheadline" >
+        <h1 className="bigheadline wow slideInDown" >
           ABOUT<span className=" about-span">ME</span>
         </h1>
         <div className=" w-100 justify-content-center myimgcontainer  d-flex  align-items-center ">
@@ -31,7 +35,7 @@ export default function About() {
 
 
         <div className="row position-relative ">
-          <div className="col-md-7   ">
+          <div className="col-md-7 wow slideInLeft    ">
             <h4 className="text-start mt-5 fw-bold ps-3 "> PERSONAL INFOS</h4>
             <div className="row  ps-3">
               <div className="col-lg-5  ">
@@ -82,7 +86,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="col-md-5  education text-start  ps-3 ">
+          <div className="col-md-5 wow slideInRight  education text-start  ps-3 ">
             <h4 className="text-start ps-3 mt-5 fw-bold ">EDUCATION</h4>
             <h5 className="h3 mb-5 mt-3  text-white">
               - Faculty of Commerce{" "}

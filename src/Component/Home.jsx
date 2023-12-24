@@ -2,13 +2,17 @@ import React, { useState } from "react";
 import mo from "../assets/bg.jpg";
 import co from "../assets/image.png";
 import { Link } from "react-router-dom";
+import WOW from 'wowjs'
+import { useEffect } from 'react';
 export default function Home() {
   // const [isHovered, setIsHovered] = useState(false);
-
+  useEffect(() => {
+    new WOW.WOW().init();
+  }, []);
 
 
   return (
-    <header className="home w-100 vh-100">
+    <header className="home wow fadeIn w-100 vh-100">
       <div className="  h-100">
         <div className="row d-flex align-items-center h-100 ">
           <div className="  col-md-4 h-100 position-relative d-flex ">
