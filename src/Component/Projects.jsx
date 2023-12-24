@@ -15,7 +15,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="projects wow fadeIn py-5">
+    <div className="projects py-5">
       <h1 className="position-absolute z-3  m-3 top-0 end-0 mobheadline text-center fw-bold fa-3x ">
             <span className="proj-span">MY</span>PROJECTS
           </h1>
@@ -24,7 +24,7 @@ export default function Projects() {
           <h1 className="bigheadline text-center fw-bold fa-3x ">
             <span className="proj-span">MY</span>PROJECTS
           </h1>
-          <div className="col-md-4">
+          <div className="col-md-4  wow slideInLeft ">
             <div className="rounded-2  position-relative">
               <div className="layer w-100 h-100 d-flex flex-column justify-content-center position-absolute ">
                 <h2 className="text-center fw-bold">E-Commerce</h2>
@@ -48,7 +48,7 @@ export default function Projects() {
               <img src={ecommercey} className="w-100 rounded-3" alt="" />
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4  wow jackInTheBox ">
             <div className="rounded-2 h-100 position-relative">
               <div className="layer w-100 h-100 d-flex flex-column justify-content-center position-absolute ">
                 <h2 className="text-center fw-bold">Youtubeclone</h2>
@@ -76,7 +76,7 @@ export default function Projects() {
               />
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4  wow slideInRight ">
             <div className="rounded-2 h-100 position-relative">
               <div className="layer w-100 h-100 d-flex flex-column justify-content-center position-absolute ">
                 <h2 className="text-center fw-bold">weather</h2>
@@ -100,7 +100,7 @@ export default function Projects() {
               <img src={weather} className="w-100 rounded-3 h-100" alt="" />
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4  wow slideInLeft ">
             <div className="rounded-2 h-100 position-relative">
               <div className="layer w-100 h-100 d-flex flex-column justify-content-center position-absolute ">
                 <h2 className="text-center fw-bold">Protofolio</h2>
@@ -124,7 +124,7 @@ export default function Projects() {
               <img src={protofolio} className="w-100 rounded-3 h-100" alt="" />
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4  wow jackInTheBox ">
             <div className="rounded-2 h-100 position-relative">
               <div className="layer w-100 h-100 d-flex flex-column justify-content-center position-absolute ">
                 <h2 className="text-center fw-bold">Meals</h2>
@@ -148,7 +148,7 @@ export default function Projects() {
               <img src={meals} className="w-100 rounded-3 h-100" alt="" />
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4  wow slideInRight ">
             <div className="rounded-2 h-100 position-relative">
               <div className="layer w-100 h-100 d-flex flex-column justify-content-center position-absolute ">
                 <h2 className="text-center fw-bold">Bakery</h2>
@@ -172,7 +172,7 @@ export default function Projects() {
               <img src={bakery} className="w-100 rounded-3 h-100" alt="" />
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4  wow slideInLeft ">
             <div className="rounded-2 h-100 position-relative">
               <div className="layer w-100 h-100 d-flex flex-column justify-content-center position-absolute ">
                 <h2 className="text-center fw-bold">Meals</h2>
@@ -202,6 +202,7 @@ export default function Projects() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }

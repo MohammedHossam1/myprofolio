@@ -8,6 +8,8 @@ import reactIc from "../assets/react-1-logo-png-transparent.png";
 import nextIc from "../assets/icons8-nextjs-240.png";
 import tsIc from "../assets/icons8-typescript-240.png";
 import sassIc from "../assets/icons8-sass-240.png";
+import sql from "../assets/sql.webp";
+
 import photoshop from "../assets/photoshop.png";
 import github from "../assets/git.png";
 import WOW from 'wowjs'
@@ -92,6 +94,13 @@ export default function Skills() {
               <img src={sassIc} className="w-100" alt="SASS" />
             </div>
             <h2>SASS</h2>
+
+          </div>
+          <div className="col-md-2 wow pulse col-6  d-flex justify-content-center flex-column align-items-center">
+            <div className="border m-1 rounded-2">
+              <img src={sql} className="w-100" alt="sql" />
+            </div>
+            <h2>SQL SERVER</h2>
 
           </div>
           <div className="col-md-2 wow pulse col-6  d-flex justify-content-center flex-column align-items-center">
