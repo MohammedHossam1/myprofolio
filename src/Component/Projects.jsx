@@ -16,12 +16,12 @@ export default function Projects() {
 
   return (
     <div className="projects py-5">
-      <h1 className="position-absolute z-3  m-3 top-0 end-0 mobheadline text-center fw-bold fa-3x ">
+      <h1 className="position-absolute z-3 wow slideInDown   m-3 top-0 end-0 mobheadline text-center fw-bold fa-3x ">
             <span className="proj-span">MY</span>PROJECTS
           </h1>
       <div className=" my-4">
         <div className="row g-3">
-          <h1 className="bigheadline text-center fw-bold fa-3x ">
+          <h1 className="bigheadline wow slideInDown text-center fw-bold fa-3x ">
             <span className="proj-span">MY</span>PROJECTS
           </h1>
           <div className="col-md-4  wow slideInLeft ">
@@ -103,7 +103,7 @@ export default function Projects() {
           <div className="col-md-4  wow slideInLeft ">
             <div className="rounded-2 h-100 position-relative">
               <div className="layer w-100 h-100 d-flex flex-column justify-content-center position-absolute ">
-                <h2 className="text-center fw-bold">Protofolio</h2>
+                <h2 className="text-center fw-bold">Portfolio</h2>
                 <div className=" d-flex  justify-content-center">
                   <a
                     className="btn px-5  mx-1  codeBtn"
@@ -175,7 +175,7 @@ export default function Projects() {
           <div className="col-md-4  wow slideInLeft ">
             <div className="rounded-2 h-100 position-relative">
               <div className="layer w-100 h-100 d-flex flex-column justify-content-center position-absolute ">
-                <h2 className="text-center fw-bold">Meals</h2>
+                <h2 className="text-center fw-bold">BookMarker</h2>
                 <div className=" d-flex  justify-content-center">
                   <a
                     className="btn px-5  mx-1  codeBtn"

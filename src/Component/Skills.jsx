@@ -21,8 +21,8 @@ export default function Skills() {
   }, []);
 
   return (
-    <div className="skills py-5 ">
-       <h1 className="position-absolute  m-3 z-3 top-0 end-0 mobheadline text-center fw-bold fa-3x ">
+    <div className="skills py-5  ">
+       <h1 className="position-absolute wow slideInDown  m-3 z-3 top-0 end-0 mobheadline text-center fw-bold fa-3x ">
         <span className="proj-span">MY</span>SKILLS
       </h1>
       <div className=" my-5">
