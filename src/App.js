@@ -7,13 +7,14 @@ import About from './Component/About';
 import Projects from './Component/Projects';
 import Contact from './Component/Contact';
 import Skills from './Component/Skills';
+import loading from '../src/assets/loadd.gif'
 import { useEffect, useState } from 'react';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
 useEffect(() => {
-  const delay = 3000; 
+  const delay = 2400; 
   const timer = setTimeout(() => {
       setIsLoading(false);
   }, delay);
@@ -24,7 +25,7 @@ useEffect(() => {
     <div>
     {isLoading ? (
     <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
-    <img loading="lazy" class="inlineImage" src="https://s.raseef22.com/storage/attachments/1083/979732.gif/r/800/image.jpg" alt/>
+    <img loading="lazy" class="inlineImage" src={loading} alt/>
     
     </div>
       

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import mo from "../assets/bg.jpg";
-import co from "../assets/image.png";
 import { Link } from "react-router-dom";
 import WOW from 'wowjs'
 import { useEffect } from 'react';

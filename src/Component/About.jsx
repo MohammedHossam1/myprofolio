@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import WOW from "wowjs";
 import mo from "../assets/bg.jpg";
-import co from "../assets/image.png";
 
 export default function About() {
-  const [isHovered, setIsHovered] = useState(false);
   
     useEffect(() => {
       new WOW.WOW().init();
     }, []);
-  
 
   return (
     <section className="about  py-5">
@@ -23,9 +20,8 @@ export default function About() {
         <div className=" w-100 justify-content-center myimgcontainer  d-flex  align-items-center ">
           <div className=" myimg rounded-circle">
             <img
-              src={isHovered ? co : mo}
-              onMouseOver={() => setIsHovered(true)}
-              onMouseOut={() => setIsHovered(false)}
+              src={mo}
+            
               alt=""
               className="w-100  rounded-circle "
               id="myImage"

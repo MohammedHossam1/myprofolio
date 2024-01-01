@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import WOW from "wowjs";
 export default function Contact() {
+  let[send,setSend]=useState(false)
   useEffect(() => {
     new WOW.WOW().init();
   }, []);
@@ -25,6 +26,9 @@ export default function Contact() {
           console.log(error.text);
         }
       );
+  }
+  function btnsend(){
+setSend(true)
   }
 
   return (
@@ -141,12 +145,16 @@ export default function Contact() {
                 <button
                   class="bttn mx-2 w-auto ps-3 my-4  d-flex justify-content-between rounded-5 align-items-center p-0"
                   type="submit"
+                  onClick={()=>btnsend()}
                 >
                   SEND MESSAGE
                   <div className="home-ic   rounded-5 d-flex justify-content-center align-items-center ms-2 ">
                     <i className="fas text-white fa-2x  fa-arrow-right "></i>
                   </div>
                 </button>
+
+               {send? <div className="text-success">Message Sent <i className="fas fa-check text-success"></i></div>:""}
+              
               </div>
             </form>
           </div>
