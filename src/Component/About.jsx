@@ -96,6 +96,10 @@ export default function About() {
               - Frontend{" "}
               <span className="text-secondary mx-2">Roote Academey</span>
             </h5>
+            <h5 className="h3 my-5  text-white">
+              - Backend{" "}
+              <span className="text-secondary mx-2">Roote Academey</span>
+            </h5>
           </div>
         </div>
       </div>

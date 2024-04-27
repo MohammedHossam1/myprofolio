@@ -88,11 +88,11 @@ setSend(true)
                   <i className="fa-brands fa-larger text-white fa-linkedin-in"></i>
                 </a>
                 <a
-                  href=""
+                  href="https://wa.me/+201125997082"
                   target="_blank"
                   className="rounded-circle d-flex justify-content-center align-items-center mx-2"
                 >
-                  <i className="fa-brands fa-larger text-white fa-whatsapp"></i>
+                  <i  className="fa-brands fa-larger text-white fa-whatsapp"></i>
                 </a>
               </div>
             </div>

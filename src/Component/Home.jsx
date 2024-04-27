@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import WOW from 'wowjs'
 import { useEffect } from 'react';
 export default function Home() {
-  // const [isHovered, setIsHovered] = useState(false);
   useEffect(() => {
     new WOW.WOW().init();
   }, []);
