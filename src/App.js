@@ -1,12 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
-import Home from './Component/Home';
-import NavBar from './Component/NavBar';
-import About from './Component/About';
-import Projects from './Component/Projects';
-import Contact from './Component/Contact';
-import Skills from './Component/Skills';
+import Home from './Component2/Home';
+import About from './Component2/About/About';
+import Projects from './Component2/Projects/Projects';
+import Contact from './Component2/Contact/Contact';
+import Skills from './Component2/Skills/Skills';
 import loading from '../src/assets/loadd.gif'
 import { useEffect, useState } from 'react';
 
@@ -25,7 +24,7 @@ useEffect(() => {
     <div>
     {isLoading ? (
     <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
-    <img loading="lazy" class="inlineImage" src={loading} alt/>
+    <img loading="lazy" className="inlineImage" src={loading} />
     
     </div>
       
@@ -33,7 +32,6 @@ useEffect(() => {
     ) : (
       
     <BrowserRouter>
-    <NavBar/>
     <div className='container ' >
     <Routes>
       <Route path='/' exact element={<Home />}/>
@@ -43,8 +41,8 @@ useEffect(() => {
       <Route path='/skills' exact element={<Skills />}/>
     </Routes>
     </div>
+    {/* <Footer/> */}
     </BrowserRouter>
-       
     )}
 </div>
 

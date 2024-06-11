@@ -5,9 +5,31 @@ body {
   font-family: var(--main-font) !important;
   background-image: repeating-radial-gradient(  #0c0a0a 80%,#2f312f41 90%,#3f4549 90%);
   background-size: 65px 65px;
-
-
+  
 }
+
+/* For Webkit based browsers (Chrome, Safari, Opera) */
+::-webkit-scrollbar-track {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 68px !important; /* Adjust the border-radius to make it rounded */
+}
+
+/* For Firefox */
+/* You can adjust the width, color, and border-radius as needed */
+html {
+  scrollbar-color: rgba(255, 255, 255, 0.534) var(--main-color);
+}
+
+/* For IE and Edge */
+/* You can adjust the width, color, and border-radius as needed */
+
+/* Add this to your CSS file */
+.about-divider {
+  border: 2px solid #007bff; /* Change the color to your desired color */
+  margin: 40px auto; /* Adjust the margin to fit your layout */
+  width: 80%; /* Adjust the width to fit your layout */
+}
+
 a {
   text-decoration: none !important;
   color: white !important;
@@ -92,7 +114,7 @@ a:hover.nav-text {
   color: white !important;
 }
 
-/* home button */
+/* Header and About button */
 .bttn {
   display: inline-block;
   padding: 0.9rem 1.8rem;
@@ -126,210 +148,19 @@ a:hover.nav-text {
   transform: translateX(0);
 }
 
-
-/* about */
-.about h1{
-  font-weight: 700;
-  font-size: 50px ;
-}
-.about h5{
-  font-size: 20px;
-  color: #a5a4a4;
-}
-.about span{
-  color: white;
-}
-.about-span{
-  color: var(--main-color) !important;
-
-}
-.email{
-  font-size: 14px !important;
-}
-.m {
-  width: 100%;
-  height: 100%;
-  background: repeating-radial-gradient(circle, #fff 5px, #000 6px);
-  background-size: 50px 100px;
-  opacity: .1;
-  z-index: 1 !important;
+.footer{
+background-color: var(--main-color) ;
 }
 
-.container{
-  z-index: 2 !important;
-}
-
-.education::before{
-  content: '';
-  width: 1px;
-  height: 70%;
-background-color: #ffffff;
-position: absolute;
-/* top: 50%; */
-margin-top: 50px;
-margin-right: 50px;
-
-}
-.bigheadline{
-display: block;
-}
-.mobheadline{
-  display: none;
-  }
-.logo{
-  z-index: 3232 !important;
-}
-/* skill */
-.skill-span,.proj-span{
-color: var(--main-color);
-}
-.skills .border{
-  transition: all .3s;
-}
-.skills .border:hover{
-transform: scale(1.1);
-}
-/* projects */
-.projects .rounded-2{
-  overflow: hidden;
-}
-.projects .rounded-3{
-border: 2px solid var(--main-color);
-}
-.projects .layer{
-  background-color:rgba(0,0,0,.7);
- top: 0%;
- transition: all .3s;
- opacity: 0;
-cursor: pointer;
-
-}
-.projects .layer:hover{
- opacity: 1;
-top: 0;
-
-}
-
-.codeBtn{
-background-color: var(--main-color) !important;
-transition: all .3s;
-border: 1px solid var(--main-color) !important;
-}
-.codeBtn:hover{
-  background-color: transparent !important;
-
-}
-.demoBtn{
-  border: 1px solid var(--main-color) !important;
-  transition: all .3s;
-
-}
-.demoBtn:hover{
-  border: 1px solid var(--main-color) !important;
-  background-color: var(--main-color) !important;
-
-}
-/* contact */
-.contact span,.contact i{
-  color: var(--main-color) ;
-}
-.contact a{
-  transition: all .3s;
-}
-.contact a:hover {
-background-color: var(--main-color) !important;
-}
-
-.contact .rounded-circle{
-  width: 40px;
-  height: 40px;
-background-color: #2e2d2d;
-color: white;
-}
-
-.contact .form-control{
-  background-color: #2e2d2d !important;
-  -webkit-text-fill-color: #868484 !important;
-  border: 1px solid #2e2d2d !important;
-  box-shadow: none !important;
-  color: white !important;
-  
-}
-.contact .form-control:focus{
-  border: 1px solid var(--main-color) !important;
-
-}
-
-
-
-/*fayyad btn */
-.button {
-  margin: 0;
-  height: auto;
-  background: transparent;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-}
-.button {
-  --border-right: 6px;
-  --text-stroke-color: rgba(255,255,255,0.6);
-  /* --main-color: #0f88fa; */
-  
-  letter-spacing: 3px;
-  text-decoration: none;
-  font-size: 30px;
-  font-family: "Arial";
-  position: relative;
-  text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--text-stroke-color);
-}
-
-/* this is the text, when you hover on button */
-.hover-text {
-  position: absolute;
-  box-sizing: border-box;
-  content: attr(data-text);
-  color: var(--main-color);
-  width: 0%;
-  inset: 0;
-  border-right: var(--border-right) solid var(--main-color);
-  overflow: hidden;
-  transition: 0.5s;
-  -webkit-text-stroke: 1px var(--main-color);
-}
-/* hover */
-.button:hover .hover-text {
-  width: 100%;
-  filter: drop-shadow(0 0 23px var(--main-color))
-}
-/*  */
-
-.myimgdiv{
-  width: 400px;
-  height: 400px;
-  background-color: var(--main-color);
-  overflow: hidden;
-  filter: blur(100px);
-}
-.myimg img{
-  filter: drop-shadow(0px 0px 50px rgb(165, 194, 235));
-
-}
-.myimg{
-  width: 400px;
-  height: 400px;
-  background-color: var(--main-color);
-  overflow: hidden;
-}
 .about .myimgcontainer{
   display: none !important;
 }
 
 
 
-
+::-webkit-scrollbar-thumb{
+  background: red !important;
+}
 @media screen and (max-width: 600px) {
   .home .col-md-4{
     display: none !important;
@@ -388,9 +219,7 @@ display: none;
   }
   
   .contact p{
-    /* font-size: 20px;
-    border: 1px solid gray;
-    padding: 10px 0px 10px 10px ; */
+
     display: none;
       }
      .contact .col-md-4{
@@ -406,4 +235,76 @@ display: none;
   font-size: 27px;
  }
 
+
 }
+@media screen and (max-width: 900px) {
+  .home .col-md-4{
+    display: none !important;
+}
+.home-h2{
+  font-size: 30px !important;
+}
+.home .my{
+  margin: 0px !important;
+}
+.home .py{
+  padding: 0px !important;
+}
+.container{
+  width: 100% !important;
+
+}
+.nav-mid-shadow{
+box-shadow: #0f88fa 5px 1px 8px ;
+}
+.myimg{
+  width:150px;
+  height: 150px;
+}
+.about .myimgcontainer{
+  display: flex !important;
+}
+.education::before{
+  content: '';
+  height: 30%;
+}
+
+.home-p{
+  width: 100%;
+}
+
+
+.bigheadline{
+  display: none ;
+  }
+  .mobheadline{
+    display: block ;
+    font-size: 27px !important;
+
+  }
+  .contact h2{
+display: none;
+  }
+  
+  .contact p{
+
+    display: none;
+      }
+     .contact .col-md-4{
+        margin: 10px 0px;
+      }
+ .contact button{
+  margin-left: 2rem !important;
+ }
+ .contact .social{
+  margin: 1rem 1rem 1rem 0rem !important;
+ }
+ .button {
+  font-size: 27px;
+ }
+
+ 
+}
+
+
+
