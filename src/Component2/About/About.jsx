@@ -22,8 +22,8 @@ export default function About() {
         <h1 className="bigheadline wow slideInDown">
           ABOUT<span className="about-span">ME</span>
         </h1>
-        <div className="w-100 justify-content-center myimgcontainer d-flex align-items-center">
-          <div className="myimg rounded-circle">
+        <div className="w-100 justify-content-center  d-flex align-items-center myimgcontainer">
+          <div className="myimg  rounded-circle">
             <img
               src={mo}
               alt="Profile"
@@ -41,7 +41,7 @@ export default function About() {
                   <div className="notiborderglow"></div>
                   <div className="notititle">Personal Information</div>
                   <div className="notibody">
-                    <h5 className="my-3">
+                    <h5 className="">
                       First name: <span>Mohammed</span>
                     </h5>
                     <h5 className="my-3">
@@ -73,7 +73,7 @@ export default function About() {
 
              <a
                 download
-                className="download-btn d-flex justify-content-between align-items-center p-3 rounded-5 mt-4"
+                className="download-btn  ms-3 w-50 d-flex justify-content-between align-items-center  rounded-5 mt-4"
                 href="https://drive.google.com/uc?export=download&id=1AUXp5poMyns03IxS-kbj1pptqBetzMOk"
               >
                 Download CV
@@ -91,19 +91,19 @@ export default function About() {
               <div className="notititle">Education</div>
               <div className="notibody">
                 <h5 className="h3 mb-5 text-white">
-                  - Faculty of Commerce{" "}
+                   Faculty of Commerce{" "}
                   <span className="text-secondary mx-2">2016-2020</span>
                 </h5>
                 <h5 className="h3 my-5 text-white">
-                  - Fundamental of Programming{" "}
+                   Fundamental of Programming{" "}
                   <span className="text-secondary mx-2">Roote Academy</span>
                 </h5>
                 <h5 className="h3 my-5 text-white">
-                  - Frontend{" "}
+                   Frontend{" "}
                   <span className="text-secondary mx-2">Roote Academy</span>
                 </h5>
                 <h5 className="h3 my-5 text-white">
-                  - Backend{" "}
+                   Backend{" "}
                   <span className="text-secondary mx-2">Roote Academy</span>
                 </h5>
               </div>

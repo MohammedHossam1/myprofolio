@@ -1,43 +1,43 @@
-
-
-
-
+/* Container for the image with styles */
 .myimg {
   position: relative;
   z-index: 10;
   border: 5px solid #fff;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.myimg::before, .myimg::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  z-index: 323 !important;
+  width: 100px;
+  height: 100px;
 }
 
 
 
-.myimg::after {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border: 5px solid transparent;
-  z-index: 2565656;
-}
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+
+
+@media (min-width: 376px) {
+  .myimg {
+    width: 200px;
+    height: 200px;
   }
 }
 
+@media (min-width: 768px) {
+  .myimg {
+    width: 300px;
+    height: 300px;
+  }
+}
 
+@media (min-width: 992px) {
+  .myimg {
+    width: 350px;
+    height: 350px;
+  }
+}
 
-
-
+@media (min-width: 1200px) {
+  .myimg {
+    width: 350px;
+    height: 350px;
+  }
+}

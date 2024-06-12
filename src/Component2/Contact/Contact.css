@@ -74,23 +74,7 @@
   }
   /*  */
   
-  .myimgdiv{
-    width: 400px;
-    height: 400px;
-    background-color: var(--main-color);
-    overflow: hidden;
-    filter: blur(100px);
-  }
-  .myimg img{
-    filter: drop-shadow(0px 0px 50px rgb(165, 194, 235));
-  
-  }
-  .myimg{
-    width: 400px;
-    height: 400px;
-    background-color: var(--main-color);
-    overflow: hidden;
-  }
+
 .ContactEmail{
   word-break: break-word;
 }
