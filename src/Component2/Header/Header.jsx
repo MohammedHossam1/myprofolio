@@ -25,10 +25,10 @@ export default function Header() {
           </div>
           <div className="col-md-7 col-12 ms-auto p-md-5 ps-3 d-flex justify-content-center flex-column align-items-start text-start text-md-start">
             <h2 className="fw-bold home-h2">
-              I'M Mohammed Hossam. <span className="text-white">Backend developer</span>
+              I'M Mohammed Hossam. <span className="text-white">Frontend developer</span>
             </h2>
             <p className="home-p">
-              I'm an Egyptian based Backend developer focused on crafting clean & user-friendly experiences, I am passionate about building excellent software that improves the lives of those around me.
+              I'm an Egyptian based Frontend developer focused on crafting clean & user-friendly experiences, I am passionate about building excellent software that improves the lives of those around me.
             </p>
             <Link className="bttn ps-3 d-flex justify-content-between rounded-5 align-items-center p-0" to="/about">
               MORE ABOUT ME

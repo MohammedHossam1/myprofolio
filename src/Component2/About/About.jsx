@@ -59,9 +59,7 @@ export default function About() {
                     <h5 className="my-3">
                       Military: <span>Completed</span>
                     </h5>
-                    <h5 className="my-3">
-                      Marital status: <span>Single</span>
-                    </h5>
+                  
                     <h5 className="my-3 ">
                       Email: <span className="text-break">
                         mohammedhossam199998@gmail.com
