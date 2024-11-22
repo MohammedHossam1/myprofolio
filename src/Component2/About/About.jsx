@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import WOW from "wowjs";
 import mo from "../../assets/bg.jpg";
+import { motion } from "framer-motion";
 import "./About.css";
 
 export default function About() {
@@ -9,20 +8,33 @@ export default function About() {
   const currentDate = new Date();
   const age = currentDate.getFullYear() - birthDate.getFullYear();
 
-  useEffect(() => {
-    new WOW.WOW().init();
-  }, []);
-
   return (
-    <section className="about py-5 my-lg-5">
-      <h1 className="position-absolute mobheadline end-0 top-0 m-3">
+    <section className="about  my-lg-5">
+      <motion.h1
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+        className="position-absolute mobheadline end-0 top-0 m-3"
+      >
         ABOUT<span className="about-span">ME</span>
-      </h1>
+      </motion.h1>
       <div className="text-center mt-3">
-        <h1 className="bigheadline wow slideInDown">
+        <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+          viewport={{ once: true }}
+          className="bigheadline  "
+        >
           ABOUT<span className="about-span">ME</span>
-        </h1>
-        <div className="w-100 justify-content-center  d-flex align-items-center myimgcontainer">
+        </motion.h1>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+          viewport={{ once: true }}
+          className="w-100 justify-content-center  d-flex align-items-center myimgcontainer"
+        >
           <div className="myimg  rounded-circle">
             <img
               src={mo}
@@ -31,9 +43,15 @@ export default function About() {
               id="myImage"
             />
           </div>
-        </div>
+        </motion.div>
         <div className="row position-relative mt-5">
-          <div className="col-lg-6 wow slideInLeft mb-5 mb-lg-0">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+            viewport={{ once: true }}
+            className="col-lg-6   mb-5 mb-lg-0"
+          >
             <div className="row ps-3">
               <div className="text-start">
                 <div className="notification personal-info">
@@ -59,9 +77,10 @@ export default function About() {
                     <h5 className="my-3">
                       Military: <span>Completed</span>
                     </h5>
-                  
+
                     <h5 className="my-3 ">
-                      Email: <span className="text-break">
+                      Email:{" "}
+                      <span className="text-break">
                         mohammedhossam199998@gmail.com
                       </span>
                     </h5>
@@ -69,7 +88,7 @@ export default function About() {
                 </div>
               </div>
 
-             <a
+              <a
                 download
                 className="download-btn  ms-3 w-50 d-flex justify-content-between align-items-center  rounded-5 mt-4"
                 href="https://drive.google.com/uc?export=download&id=1AUXp5poMyns03IxS-kbj1pptqBetzMOk"
@@ -80,33 +99,39 @@ export default function About() {
                 </div>
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="col-lg-6 wow slideInRight education text-start ps-3">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+            viewport={{ once: true }}
+            className="col-lg-6   education text-start ps-3"
+          >
             <div className="notification education">
               <div className="notiglow"></div>
               <div className="notiborderglow"></div>
               <div className="notititle">Education</div>
               <div className="notibody">
                 <h5 className="h3 mb-5 text-white">
-                   Faculty of Commerce{" "}
+                  Faculty of Commerce{" "}
                   <span className="text-secondary mx-2">2016-2020</span>
                 </h5>
                 <h5 className="h3 my-5 text-white">
-                   Fundamental of Programming{" "}
+                  Fundamental of Programming{" "}
                   <span className="text-secondary mx-2">Roote Academy</span>
                 </h5>
                 <h5 className="h3 my-5 text-white">
-                   Frontend{" "}
+                  Frontend{" "}
                   <span className="text-secondary mx-2">Roote Academy</span>
                 </h5>
                 <h5 className="h3 my-5 text-white">
-                   Backend{" "}
+                  Backend{" "}
                   <span className="text-secondary mx-2">Roote Academy</span>
                 </h5>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

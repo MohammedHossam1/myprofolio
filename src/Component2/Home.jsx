@@ -1,16 +1,12 @@
-import React, { useEffect } from "react";
-import WOW from "wowjs";
 import About from "./About/About";
 import Contact from "./Contact/Contact";
-import Projects from "./Projects/Projects";
-import Skills from "./Skills/Skills";
 import Header from "./Header/Header";
 import NavBar from "./NavBar";
+import Projects from "./Projects/Projects";
+import Skills from "./Skills/Skills";
 
 export default function Home() {
-  useEffect(() => {
-    new WOW.WOW().init();
-  }, []);
+
 
   return (
     <>

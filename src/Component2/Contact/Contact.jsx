@@ -1,16 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
-import WOW from "wowjs";
+import { useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Contact.css";
 
 export default function Contact() {
   const form = useRef();
-
-  useEffect(() => {
-    new WOW.WOW().init();
-  }, []);
 
   function sendEmail(e) {
     e.preventDefault();
@@ -25,7 +21,7 @@ export default function Contact() {
     ) {
       emailjs
         .sendForm(
-          "service_9iwsj35",
+          "service_qkx513h",
           "template_smnyzks",
           form.current,
           "1mJgzsdbgrEobslUK"
@@ -56,21 +52,46 @@ export default function Contact() {
   }
 
   return (
-    <div className="contact my-lg-5 py-5">
+    <motion.div
+      className="contact my-lg-5 py-5"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once:true }}
+      transition={{ duration: 1 }}
+    >
       <ToastContainer />
       {/* Title for mobile */}
-      <h1 className="position-absolute fw-bold mobheadline end-0 top-0 m-3">
+      <motion.h1
+        className="position-absolute fw-bold mobheadline end-0 top-0 m-3"
+        initial={{ opacity: 0, x: 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once:true }}
+
+      >
         GETIN<span className="about-span">TOUCH</span>
-      </h1>
+      </motion.h1>
       {/* Title for large screens */}
-      <h1 className="text-center bigheadline wow slideInDown my-4 fw-bold fa-3x">
+      <motion.h1
+        className="text-center bigheadline my-4 fw-bold fa-3x"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
         GETIN<span>TOUCH</span>
-      </h1>
+      </motion.h1>
       {/* Contact Section */}
       <div className="container">
         <div className="row">
           {/* Left side contact info */}
-          <div className="col-lg-4 col-md-6 wow slideInLeft">
+          <motion.div
+            className="col-lg-4 col-md-6"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <div className="ms-lg-5 mt-5 mb-3">
               <h2 className="fw-bold fa-md-2x">DON'T BE SHY !</h2>
               <p className="lead">Feel free to get in touch with me.</p>
@@ -78,7 +99,9 @@ export default function Contact() {
                 <i className="fas fa-envelope fa-lg"></i>
                 <div className="ms-3">
                   <h5 className="text-secondary mb-1">MAIL ME:</h5>
-                  <h6 className="ContactEmail">mohammedhossam199998@gmail.com</h6>
+                  <h6 className="ContactEmail">
+                    mohammedhossam199998@gmail.com
+                  </h6>
                 </div>
               </div>
               <div className="d-flex align-items-center mb-3">
@@ -123,9 +146,15 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
           {/* Right side form */}
-          <div className="col-lg-8 col-md-6 wow slideInRight mt-md-5">
+          <motion.div
+            className="col-lg-8 col-md-6 mt-md-5"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <form ref={form} onSubmit={sendEmail}>
               <div className="row">
                 <div className="col-md-4 mb-3">
@@ -179,9 +208,9 @@ export default function Contact() {
                 </div>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
