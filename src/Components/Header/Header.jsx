@@ -33,8 +33,6 @@ export default function Header() {
               I'M Mohammed Hossam.{" "}
               <span className="text-white">Frontend developer</span>
             </h2>
-            {/* <TextGenerateEffectDemo duration={2} filter={false}  */}
-            {/* words={info} /> */}
             <p className="lh-lg">
               I'm an Egyptian based Frontend developer focused on crafting clean
               & user-friendly experiences, I am passionate about building

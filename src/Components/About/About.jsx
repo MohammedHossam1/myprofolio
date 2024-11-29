@@ -91,7 +91,7 @@ export default function About() {
               <a
                 download
                 className="download-btn  ms-3 w-50 d-flex justify-content-between align-items-center  rounded-5 mt-4"
-                href="https://drive.google.com/uc?export=download&id=1AUXp5poMyns03IxS-kbj1pptqBetzMOk"
+                href="https://drive.google.com/uc?export=download&id=1OhzQ9pwoMy92ZZjb8tr9f_Xl-td16z0L"
               >
                 Download CV
                 <div className="download-icon rounded-5 d-flex justify-content-center align-items-center ms-2">

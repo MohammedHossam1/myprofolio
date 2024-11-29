@@ -1,13 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import { BrowserRouter,Route,Routes } from 'react-router-dom';
-import Home from './Component2/Home';
-import About from './Component2/About/About';
-import Projects from './Component2/Projects/Projects';
-import Contact from './Component2/Contact/Contact';
-import Skills from './Component2/Skills/Skills';
-import loading from '../src/assets/loadd.gif'
 import { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import loading from '../src/assets/loadd.gif';
+import './App.css';
+import About from './Components/About/About';
+import Contact from './Components/Contact/Contact';
+import Home from './Components/Home';
+import Projects from './Components/Projects/Projects';
+import Skills from './Components/Skills/Skills';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

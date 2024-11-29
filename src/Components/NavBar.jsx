@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function NavBar({ activeSection }) {
   const handleScroll = (event, targetId) => {
@@ -17,8 +18,8 @@ export default function NavBar({ activeSection }) {
       <div className="navBar">
         <ul className="me-4 mb-2 h-100 d-flex flex-md-column align-items-end justify-content-center">
           <li className="my-2 mx-1">
-            <a
-              href="#header"
+            <Link
+              to="#header"
               onClick={(e) => handleScroll(e, "header")}
               className={`d-flex nav-mid-shadow nav-text rounded-5 justify-content-center align-items-center ${getIconClass("header")}`}
             >
@@ -26,11 +27,11 @@ export default function NavBar({ activeSection }) {
               <div className={`nav-ic shadow d-flex rounded-circle justify-content-center align-items-center ${getIconClass("header")}`}>
                 <i className="fas fa-home"></i>
               </div>
-            </a>
+            </Link>
           </li>
           <li className="my-2 mx-1">
-            <a
-              href="#about"
+            <Link
+              to="#about"
               onClick={(e) => handleScroll(e, "about")}
               className={`d-flex nav-text rounded-5 nav-mid-shadow justify-content-center align-items-center ${getIconClass("about")}`}
             >
@@ -38,11 +39,11 @@ export default function NavBar({ activeSection }) {
               <div className={`nav-ic shadow d-flex rounded-circle justify-content-center align-items-center ${getIconClass("about")}`}>
                 <i className="fa-solid fa-user"></i>
               </div>
-            </a>
+            </Link>
           </li>
           <li className="my-2 mx-1">
-            <a
-              href="#projects"
+            <Link
+              to="#projects"
               onClick={(e) => handleScroll(e, "projects")}
               className={`d-flex nav-text rounded-5 nav-mid-shadow justify-content-center align-items-center ${getIconClass("projects")}`}
             >
@@ -50,11 +51,11 @@ export default function NavBar({ activeSection }) {
               <div className={`nav-ic shadow d-flex rounded-circle justify-content-center align-items-center ${getIconClass("projects")}`}>
                 <i className="fa-solid fa-briefcase"></i>
               </div>
-            </a>
+            </Link>
           </li>
           <li className="my-2 mx-1">
-            <a
-              href="#skills"
+            <Link
+              to="#skills"
               onClick={(e) => handleScroll(e, "skills")}
               className={`d-flex nav-text rounded-5 nav-mid-shadow justify-content-center align-items-center ${getIconClass("skills")}`}
             >
@@ -62,11 +63,11 @@ export default function NavBar({ activeSection }) {
               <div className={`nav-ic shadow d-flex rounded-circle justify-content-center align-items-center ${getIconClass("skills")}`}>
                 <i className="fa-solid fa-layer-group"></i>
               </div>
-            </a>
+            </Link>
           </li>
           <li className="my-2 mx-1">
-            <a
-              href="#contact"
+            <Link
+              to="#contact"
               onClick={(e) => handleScroll(e, "contact")}
               className={`d-flex nav-text rounded-5 nav-mid-shadow justify-content-center align-items-center ${getIconClass("contact")}`}
             >
@@ -74,12 +75,12 @@ export default function NavBar({ activeSection }) {
               <div className={`nav-ic shadow d-flex rounded-circle justify-content-center align-items-center ${getIconClass("contact")}`}>
                 <i className="fas fa-message"></i>
               </div>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
 
-      <a href="#header" onClick={(e) => handleScroll(e, "header")}>
+      <Link to="#header" onClick={(e) => handleScroll(e, "header")}>
         <div className="position-absolute d-flex justify-content-between align-items-center px-md-3 top-0 start-0 p-2 pt-3 w-100">
           <div className="logo">
             <h2 className="button" data-text="Awesome">
@@ -90,7 +91,7 @@ export default function NavBar({ activeSection }) {
             </h2>
           </div>
         </div>
-      </a>
+      </Link>
     </>
   );
 }

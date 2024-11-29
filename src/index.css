@@ -3,9 +3,12 @@ body {
   color: white !important;
   overflow-x: hidden;
   font-family: var(--main-font) !important;
-  background-image: repeating-radial-gradient(  #0c0a0a 80%,#2f312f41 90%,#3f4549 90%);
+  background-image: repeating-radial-gradient(
+    #0c0a0a 80%,
+    #2f312f41 90%,
+    #3f4549 90%
+  );
   background-size: 65px 65px;
-  
 }
 
 html {
@@ -51,12 +54,12 @@ li {
 }
 
 /* nav */
-.navBar{
-  position:fixed;
-   z-index: 3 ;
-    bottom:0;
-     top:0;
-      right: 0; 
+.navBar {
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  top: 0;
+  right: 0;
 }
 .nav-ic {
   width: 45px;
@@ -129,120 +132,114 @@ a:hover.nav-text {
   transform: translateX(0);
 }
 
-
-
-
-
-
-@media screen and (max-width: 600px) {
-.home .col-md-4{
-    display: none !important;
+@media screen and (max-width: 1300px) {
+  .navBar a{
+    border: white 2px solid;
+  }
 }
-.home-h2{
-  font-size: 30px !important;
-}
-.home .my{
-  margin: 0px !important;
-}
-.home .py{
-  padding: 0px !important;
-}
-.container{
-  width: 100% !important;
+@media screen and (max-width: 700px) {
 
-}
-
-.myimg{
-  width:1530px;
-  height: 150px;
-}
-
-
-.home-p{
-  width: 100%;
-}
-.navBar{
+.navBar {
   position: fixed;
   right: 0 !important;
   left: 0 !important;
   bottom: 0 !important;
-  top:100% !important;
-transform: translateY(-100%);
-  height: 40px !important;
+  top: 100% !important;
+  transform: translateY(-100%);
+  height: 60px !important;
+  background-color: gray !important;
 }
+body{
+  margin-bottom: 20px !important;
+}
+}
+@media screen and (max-width: 600px) {
+  .home .col-md-4 {
+    display: none !important;
+  }
+  .home-h2 {
+    font-size: 30px !important;
+  }
+  .home .my {
+    margin: 0px !important;
+  }
+  .home .py {
+    padding: 0px !important;
+  }
+  .container {
+    width: 100% !important;
+  }
 
-.bigheadline{
-  display: none ;
+  .myimg {
+    width: 1530px;
+    height: 150px;
   }
-  .mobheadline{
-    display: block ;
-    font-size: 27px !important;
 
+  .home-p {
+    width: 100%;
   }
-  .contact h2{
-display: none;
-  }
-  
-  .contact p{
+
+
+  .bigheadline {
     display: none;
-      }
-   
- .contact .social{
-  margin: 1rem 1rem 1rem 0rem !important;
- }
- .button {
-  font-size: 27px;
- }
+  }
+  .mobheadline {
+    display: block;
+    font-size: 27px !important;
+  }
+  .contact h2 {
+    display: none;
+  }
 
+  .contact p {
+    display: none;
+  }
 
+  .contact .social {
+    margin: 1rem 1rem 1rem 0rem !important;
+  }
+  .button {
+    font-size: 27px;
+  }
 }
 @media screen and (max-width: 900px) {
-.home .col-md-4{
+  .home .col-md-4 {
     display: none !important;
-}
-.home-h2{
-  font-size: 30px !important;
-}
-.home .my{
-  margin: 0px !important;
-}
-.home .py{
-  padding: 0px !important;
-}
-.container{
-  width: 100% !important;
-
-}
-
-
-.education::before{
-  content: '';
-  height: 30%;
-}
-
-.home-p{
-  width: 100%;
-}
-
-
-.bigheadline{
-  display: none ;
   }
-  .mobheadline{
-    display: block ;
+  .home-h2 {
+    font-size: 30px !important;
+  }
+  .home .my {
+    margin: 0px !important;
+  }
+  .home .py {
+    padding: 0px !important;
+  }
+  .container {
+    width: 100% !important;
+  }
+
+  .education::before {
+    content: "";
+    height: 30%;
+  }
+
+  .home-p {
+    width: 100%;
+  }
+
+  .bigheadline {
+    display: none;
+  }
+  .mobheadline {
+    display: block;
     font-size: 27px !important;
-
   }
- 
- .contact .social{
-  margin: 1rem 1rem 1rem 0rem !important;
- }
- .button {
-  font-size: 27px;
- }
 
- 
+  .contact .social {
+    margin: 1rem 1rem 1rem 0rem !important;
+  }
+  .button {
+    font-size: 27px;
+  }
 }
-
-
-
