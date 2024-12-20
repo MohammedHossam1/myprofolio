@@ -23,7 +23,7 @@ function App() {
     <div>
       {isLoading ? (
         <div className="d-flex w-100 vh-100 justify-content-center align-items-center">
-          <img loading="lazy" className="inlineImage" src={loading} />
+          <img loading="lazy" className="inlineImage" src={loading} alt="loader"/>
         </div>
       ) : (
         <BrowserRouter>
