@@ -7,7 +7,7 @@ export default function Modal({ isOpen, onClose, project }) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="modal-overlay"
+          className="modal-overlay overflow-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }} // Fade out when the modal is closing
@@ -27,7 +27,7 @@ export default function Modal({ isOpen, onClose, project }) {
             <h2>{project.title}</h2>
             <p>{project.description}</p>
             <h4>Skills Used:</h4>
-            <ul className="d-flex gap-2">
+            <ul className="d-flex gap-2 ms-0 flex-wrap">
               {project.skills.map((skill, index) => (
                 <li key={index}>{skill}</li>
               ))}

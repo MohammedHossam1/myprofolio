@@ -84,7 +84,7 @@ const projects = [
     imgSrc: shgrade,
     codeLink: null,
     demoLink: "https://shgrade.serv5.com.eg/",
-    description: "An e-commerce platform for mobiles and electronics.",
+    description: "An e-commerce store specializing in phones and electronics. It offers users a seamless shopping experience with several features that enhance convenience, including:Multiple Payment Gateways: To facilitate online payments through various methods.Product Filtering: Allowing users to filter products by category, price, brand, and more, making it easier to find the right item.Authentication System (Auth): Enabling users to register and log in to track their orders and manage their data.Shopping Cart: For adding products and adjusting quantities easily.Wishlist: Allowing users to save their favorite products for later review and more...",
     skills: ["HTML","CSS","Tailwind","JavaScript","Zod","React use form","Zustand","Next.js", "API Integration", "Teamwork"],
   },
 ];

@@ -15,7 +15,7 @@ export default function NavBar({ activeSection }) {
 
   return (
     <>
-      <div className="navBar">
+      {/* <div className="navBar">
         <ul className="me-4 mb-2 h-100 d-flex flex-md-column align-items-end justify-content-center">
           <li className="my-2 mx-1">
             <Link
@@ -78,7 +78,7 @@ export default function NavBar({ activeSection }) {
             </Link>
           </li>
         </ul>
-      </div>
+      </div> */}
 
       <Link to="#header" onClick={(e) => handleScroll(e, "header")}>
         <div className="position-absolute d-flex justify-content-between align-items-center px-md-3 top-0 start-0 p-2 pt-3 w-100">
