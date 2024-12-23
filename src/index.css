@@ -172,8 +172,8 @@ body{
   }
 
   .myimg {
-    width: 1530px;
-    height: 150px;
+    width: 10px;
+    height: 10px;
   }
 
   .home-p {
@@ -186,7 +186,7 @@ body{
   }
   .mobheadline {
     display: block;
-    font-size: 27px !important;
+    font-size: 40px !important;
   }
   .contact h2 {
     display: none;
@@ -234,7 +234,8 @@ body{
   }
   .mobheadline {
     display: block;
-    font-size: 27px !important;
+    font-size: 40px !important;
+    text-align: center;
   }
 
   .contact .social {

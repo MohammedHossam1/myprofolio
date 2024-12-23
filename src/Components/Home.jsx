@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <>
-      <section id="header">
+      <section >
         <NavBar />
       </section>
       <section id="header">

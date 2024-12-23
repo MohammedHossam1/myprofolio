@@ -1,4 +1,3 @@
-import mo from "../../assets/bg.jpg";
 import { motion } from "framer-motion";
 import "./About.css";
 
@@ -14,7 +13,9 @@ export default function About() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-        className="position-absolute mobheadline end-0 top-0 m-3"
+        className=" mobheadline  m-3"
+        viewport={{ once: true }}
+
       >
         ABOUT<span className="about-span">ME</span>
       </motion.h1>
@@ -35,16 +36,18 @@ export default function About() {
           viewport={{ once: true }}
           className="w-100 justify-content-center  d-flex align-items-center myimgcontainer"
         >
-          <div className="myimg  rounded-circle">
+          {/* <div className="  rounded-circle  border border-3"
+          style={{width:"150px",height:"150px"}}
+          >
             <img
               src={mo}
               alt="Profile"
-              className="w-100 rounded-circle"
+              className="w-100 rounded-circle bg-red-900"
               id="myImage"
             />
-          </div>
+          </div> */}
         </motion.div>
-        <div className="row position-relative mt-5">
+        <div className="row position-relative mt-2">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}

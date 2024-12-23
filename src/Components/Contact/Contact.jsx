@@ -53,7 +53,7 @@ export default function Contact() {
 
   return (
     <motion.div
-      className="contact my-lg-5 py-5"
+      className="contact my-lg-5 py-5 relative"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once:true }}
@@ -62,7 +62,7 @@ export default function Contact() {
       <ToastContainer />
       {/* Title for mobile */}
       <motion.h1
-        className="position-absolute fw-bold mobheadline end-0 top-0 m-3"
+        className=" fw-bold mobheadline 1 end-0 top-0 m-3"
         initial={{ opacity: 0, x: 20 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}

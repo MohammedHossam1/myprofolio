@@ -16,9 +16,15 @@ import './Skills.css';
 export default function Skills() {
   return (
     <div className="skills my-lg-5 py-5">
-      <h1 className="position-absolute  m-3 z-3 top-0 end-0 mobheadline text-center fw-bold fa-3x">
+      <motion.h1
+      initial={{y:-40,opacity:0}}
+      whileInView={{y:0,opacity:1}}
+      viewport={{once:true}}
+      transition={{duration: 1 }}
+
+      className="m-3 mobheadline  fw-bold ">
         <span className="proj-span">MY</span>SKILLS
-      </h1>
+      </motion.h1>
       <div className="my-5">
         <h1 className="text-center my-5 bigheadline fw-bold fa-3x">
           <span className="skill-span">MY</span>SKILLS
@@ -45,6 +51,8 @@ export default function Skills() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2, duration: 0.2 }}
+              viewport={{once:true}}
+
             >
               <div className="border m-1 rounded-2 skill-icon">
                 <img src={skill.src} className="w-100" alt={skill.alt} />
