@@ -24,14 +24,15 @@ export default function Modal({ isOpen, onClose, project }) {
             <button className="close-button" onClick={onClose}>
               &times;
             </button>
-            <h2>{project.title}</h2>
+            <h2>{project.name}</h2>
+            <h4>{"Description: "}</h4>
             <p>{project.description}</p>
-            <h4>Skills Used:</h4>
-            <ul className="d-flex gap-2 ms-0 flex-wrap">
+            {/* <h4>Skills Used:</h4> */}
+            {/* <ul className="d-flex gap-2 ms-0 flex-wrap">
               {project.skills.map((skill, index) => (
                 <li key={index}>{skill}</li>
               ))}
-            </ul>
+            </ul> */}
           </motion.div>
         </motion.div>
       )}

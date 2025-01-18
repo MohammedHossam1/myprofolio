@@ -6,28 +6,28 @@ import Projects from "./Projects/Projects";
 import Skills from "./Skills/Skills";
 
 export default function Home() {
-
-
   return (
     <>
-      <section >
+      <section>
         <NavBar />
       </section>
-      <section id="header">
-        <Header />
-      </section>
-      <section id="about">
-        <About />
-      </section>
-      <section id="projects">
-        <Projects />
-      </section>
-      <section id="skills">
-        <Skills />
-      </section>
-      <section id="contact">
-        <Contact />
-      </section>
+      <div className="container">
+        <section id="header">
+          <Header />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+      </div>
     </>
   );
 }

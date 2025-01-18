@@ -1,28 +1,43 @@
 import { Link } from "react-router-dom";
 import mo from "../../assets/bg.jpg";
+import mainImage from "../../assets/main-image.jpg";
+import mainImageHover from "../../assets/main-image-hover.jpg";
 import "./Header.css";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 export default function Header() {
-
-
   return (
-    <header className="home  w-100 vh-100">
-      <motion.div 
-        initial={{opacity:0}}
-        animate={{opacity:1}}
+    <header className="home  w-100 h-[90vh]">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-      className="h-100 container">
+        className="h-100 container"
+      >
         <div className="row d-flex align-items-center h-100">
           <div className="col-md-4 col-12 h-100 position-relative d-flex justify-content-center mb-3 mb-md-0">
             <div className="opacity-50 d-flex align-items-center">
               <div className="myimgdiv rounded-circle"></div>
             </div>
-            <div className="top-50 translate-middle-y d-flex position-absolute align-items-center">
-              <div className="myimg rounded-circle">
-                <img
-                  src={mo}
+            <div className="top-50 cursor-pointer translate-middle-y d-flex position-absolute align-items-center">
+              <div className="myimg  rounded-circle group">
+                <motion.img
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                  src={mainImage}
                   alt=""
-                  className="w-100 rounded-circle"
+                  className="object-cover group-hover:hidden object-bottom"
+                  id="myImage"
+                />
+                <motion.img
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                  src={mainImageHover}
+                  alt=""
+                  className="object-cover hidden group-hover:block object-bottom"
                   id="myImage"
                 />
               </div>

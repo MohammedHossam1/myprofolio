@@ -22,20 +22,23 @@ function App() {
   return (
     <div>
       {isLoading ? (
-        <div className="d-flex w-100 vh-100 justify-content-center align-items-center">
-          <img loading="lazy" className="inlineImage" src={loading} alt="loader"/>
+        <div className="d-flex w-100 vh-100 justify-content-center  align-items-center">
+          <img
+            loading="lazy"
+            className="inlineImage"
+            src={loading}
+            alt="loader"
+          />
         </div>
       ) : (
         <BrowserRouter>
-          <div className="container ">
-            <Routes>
-              <Route path="/" exact element={<Home />} />
-              <Route path="/about" exact element={<About />} />
-              <Route path="/projects" exact element={<Projects />} />
-              <Route path="/contact" exact element={<Contact />} />
-              <Route path="/skills" exact element={<Skills />} />
-            </Routes>
-          </div>
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/about" exact element={<About />} />
+            <Route path="/projects" exact element={<Projects />} />
+            <Route path="/contact" exact element={<Contact />} />
+            <Route path="/skills" exact element={<Skills />} />
+          </Routes>
           {/* <Footer/> */}
         </BrowserRouter>
       )}

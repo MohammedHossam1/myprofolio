@@ -1,120 +1,35 @@
-import { useState } from "react";
-import Modal from "./ProjectModal";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
-import "./Projects.css";
-// Importing images
-import imgBakery from "../../assets/projects/bakery.png";
-import imgBookmarker from "../../assets/projects/bookmarker.png";
-import imgEcommerce from "../../assets/projects/ecommercey.png";
-import greenCar from "../../assets/projects/greencar.png";
-import imgYoutube from "../../assets/projects/j.png";
-import imgMeals from "../../assets/projects/meals.png";
-import imgPortfolio from "../../assets/projects/protofolio.png";
-import shgrade from "../../assets/projects/shgrade.png";
-import imgWeather from "../../assets/projects/weather.png";
-import {motion} from 'framer-motion'
+import Modal from "./ProjectModal";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/firebase";
 
-// Project data
-const projects = [
-  {
-    title: "E-Commerce",
-    imgSrc: imgEcommerce,
-    codeLink: "https://e-commercy.vercel.app/",
-    demoLink: "https://mohammedhossam1.github.io/ECommercy/",
-    description: "An advanced e-commerce platform for online shopping.",
-    skills: ["HTML", "CSS", "JS", "React", "Bootstrap", "JavaScript"],
-  },
-  {
-    title: "Youtubeclone",
-    imgSrc: imgYoutube,
-    codeLink: "https://github.com/MohammedHossam1/Youtubeclone",
-    demoLink: "https://amboba.vercel.app/",
-    description: "A clone of YouTube with search and video playback features.",
-    skills: ["HTML", "CSS", "JS", "React", "MUI", "YouTube API"],
-  },
-  {
-    title: "Weather",
-    imgSrc: imgWeather,
-    codeLink: "https://github.com/MohammedHossam1/weather/",
-    demoLink: "https://mohammedhossam1.github.io/weather/",
-    description: "A weather app showing live forecasts.",
-    skills: ["HTML", "CSS", "JS", "React", "API Integration"],
-  },
-  {
-    title: "Portfolio",
-    imgSrc: imgPortfolio,
-    codeLink: "https://github.com/MohammedHossam1/DevFolio",
-    demoLink: "https://mohammedhossam1.github.io/DevFolio/",
-    description: "A personal portfolio showcasing projects and skills.",
-    skills: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-  },
-  {
-    title: "Meals",
-    imgSrc: imgMeals,
-    codeLink: "https://github.com/MohammedHossam1/Meals",
-    demoLink: "https://mohammedhossam1.github.io/Meals/",
-    description: "A recipe app displaying popular meal ideas.",
-    skills: ["HTML", "CSS", "JavaScript", "React", "API Integration"],
-  },
-  {
-    title: "Bakery",
-    imgSrc: imgBakery,
-    codeLink: "https://github.com/MohammedHossam1/bakery",
-    demoLink: "https://mohammedhossam1.github.io/bakery/",
-    description: "A landing page for a bakery business.",
-    skills: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "BookMarker",
-    imgSrc: imgBookmarker,
-    codeLink: "https://github.com/MohammedHossam1/Bookmarker",
-    demoLink: "https://mohammedhossam1.github.io/Bookmarker/",
-    description: "An app to manage and organize bookmarks.",
-    skills: ["HTML", "CSS", "Bootstrap", "JavaScript"],
-  },
-  {
-    title: "GreenCar",
-    imgSrc: greenCar,
-    codeLink: null,
-    demoLink: "https://greencar.app/",
-    description: "An application for car rentals.",
-    skills: [
-      "HTML",
-      "CSS",
-      "Tailwind",
-      "JavaScript",
-      "Zod",
-      "React use form",
-      "Nextjs",
-      "UI Design",
-      "Responsive Layout",
-    ],
-  },
-  {
-    title: "Shgrade",
-    imgSrc: shgrade,
-    codeLink: null,
-    demoLink: "https://shgrade.serv5.com.eg/",
-    description:
-      "An e-commerce store specializing in phones and electronics. It offers users a seamless shopping experience with several features that enhance convenience, including:Multiple Payment Gateways: To facilitate online payments through various methods.Product Filtering: Allowing users to filter products by category, price, brand, and more, making it easier to find the right item.Authentication System (Auth): Enabling users to register and log in to track their orders and manage their data.Shopping Cart: For adding products and adjusting quantities easily.Wishlist: Allowing users to save their favorite products for later review and more...",
-    skills: [
-      "HTML",
-      "CSS",
-      "Tailwind",
-      "JavaScript",
-      "Zod",
-      "React use form",
-      "Zustand",
-      "Next.js",
-      "API Integration",
-      "Teamwork",
-    ],
-  },
-];
-
-// Main Projects Component
 export default function Projects() {
+  const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "projects"));
+        const projectsData = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          title: doc.data().name || "Untitled Project",
+          imgSrc: doc.data().url || "default-image-url.jpg",
+          codeLink: doc.data().code || "#",
+          demoLink: doc.data().demo || "#",
+          description: doc.data().description || "...",
+          best: doc.data().best || false, // Check for 'best' property
+        }));
+        setProjects(projectsData);
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+      }
+    };
+
+    fetchProjects();
+  }, []);
 
   const handleOpenModal = (project) => {
     setSelectedProject(project);
@@ -131,7 +46,7 @@ export default function Projects() {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="m-3  mobheadline  fw-bold "
+        className="m-3 mobheadline fw-bold"
       >
         <span className="proj-span">MY</span>PROJECTS
       </motion.h1>
@@ -142,9 +57,9 @@ export default function Projects() {
         <div className="row g-3">
           {projects.map((project, index) => (
             <ProjectCard
-              key={index}
+              key={project.id}
               {...project}
-              delay={index * 0.3} // Set delay based on index
+              delay={index * 0.3}
               onInfoClick={() => handleOpenModal(project)}
             />
           ))}

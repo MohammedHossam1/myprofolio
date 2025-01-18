@@ -11,6 +11,7 @@
     "bootstrap": "^5.3.2",
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
+    "firebase": "^11.1.0",
     "framer-motion": "^11.2.10",
     "picocolors": "^1.1.1",
     "react": "^18.2.0",
@@ -51,6 +52,9 @@
     "@babel/code-frame": "^7.26.2",
     "@babel/core": "^7.26.0",
     "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2"
+    "@types/react-dom": "^19.0.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
   }
 }

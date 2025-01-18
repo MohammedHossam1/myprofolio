@@ -49,3 +49,58 @@ display: flex !important;
 .info-icon:hover {
   transform: scale(1.1);
 }
+.ribbon {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 93px;
+  height: 93px;
+  text-align: left;
+}
+
+.ribbon span {
+  font-size: 0.8rem;
+  color: white;
+  text-align: center;
+  line-height: 32px;
+  transform: rotate(-45deg);
+  width: 125px;
+  display: block;
+  background: linear-gradient(#ff6b6b 0%, #ee5253 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 17px;
+  left: -29px;
+  transition: all 0.3s ease;
+}
+
+.ribbon span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid #ee5253;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #ee5253;
+}
+
+.ribbon span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #ee5253;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #ee5253;
+}
+
+.ribbon:hover span {
+  background: linear-gradient(#ff4757 0%, #ee3344 100%);
+  transform: rotate(-45deg) scale(1.05);
+}

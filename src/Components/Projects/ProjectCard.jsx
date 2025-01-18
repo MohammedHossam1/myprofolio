@@ -8,16 +8,22 @@ export default function ProjectCard({
   demoLink,
   delay,
   onInfoClick,
+  best, // Receive the 'best' property
 }) {
   return (
     <motion.div
-      className=" col-lg-4 col-md-6 col-sm-12"
+      className="col-lg-4 col-md-6 col-sm-12"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay, duration: 0.5 }}
       viewport={{ once: true }}
     >
       <div className="project-card rounded-2 h-100 position-relative">
+        {best && (
+            <div className="ribbon">
+            <span className="font-bold">Best</span>
+          </div>
+        )}
         <div className="layer w-100 h-100 d-flex flex-column justify-content-center position-absolute">
           <h2 className="text-center fw-bold">{title}</h2>
           <div className="d-flex justify-content-center">
@@ -41,9 +47,13 @@ export default function ProjectCard({
             </a>
           </div>
         </div>
-        <img src={imgSrc} className="w-100 rounded-3 h-100" alt={title} />
+        <img
+          src={imgSrc}
+          className="w-100 rounded-3 object-cover h-[250px]"
+          alt={title}
+        />
         <FaInfoCircle
-          className="info-icon  position-absolute text-white top-0 end-0 m-3"
+          className="info-icon position-absolute text-white top-0 end-0 m-3"
           size={24}
           onClick={onInfoClick}
         />
