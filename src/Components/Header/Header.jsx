@@ -6,7 +6,7 @@ import "./Header.css";
 import { motion } from "framer-motion";
 export default function Header() {
   return (
-    <header className="home  w-100 h-[90vh]">
+    <header className="home  w-100  h-[90vh]">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

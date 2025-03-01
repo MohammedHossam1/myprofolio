@@ -15,7 +15,7 @@ import './Skills.css';
 
 export default function Skills() {
   return (
-    <div className="skills my-lg-5 py-5">
+    <div className="skills my-lg-5 lg:py-5">
       <motion.h1
       initial={{y:-40,opacity:0}}
       whileInView={{y:0,opacity:1}}
@@ -25,12 +25,12 @@ export default function Skills() {
       className="m-3 mobheadline  fw-bold ">
         <span className="proj-span">MY</span>SKILLS
       </motion.h1>
-      <div className="my-5">
-        <h1 className="text-center my-5 bigheadline fw-bold fa-3x">
+      <div className=" ">
+        <h1 className="text-center bigheadline my-3 fw-bold fa-3x">
           <span className="skill-span">MY</span>SKILLS
         </h1>
 
-        <div className="row d-flex justify-content-center w-100">
+        <div className="row flex justify-center m-auto items-center  w-100">
           {[
             { src: htmlIc, alt: "HTML5", label: "HTML5" },
             { src: cssIc, alt: "CSS3", label: "CSS3" },

@@ -40,7 +40,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="projects my-lg-5 py-5" id="projects">
+    <div className="projects my-lg-5 " id="projects">
       <motion.h1
         initial={{ y: -40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -50,8 +50,8 @@ export default function Projects() {
       >
         <span className="proj-span">MY</span>PROJECTS
       </motion.h1>
-      <div className="my-4">
-        <h1 className="bigheadline text-center my-5 fw-bold fa-3x">
+      <div className="">
+        <h1 className="bigheadline text-center my-3 fw-bold fa-3x">
           <span className="proj-span">MY</span>PROJECTS
         </h1>
         <div className="row g-3">

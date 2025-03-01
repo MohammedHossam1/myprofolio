@@ -53,7 +53,7 @@ export default function Contact() {
 
   return (
     <motion.div
-      className="contact my-lg-5 py-5 relative"
+      className="contact my-lg-5  relative"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once:true }}
@@ -73,7 +73,7 @@ export default function Contact() {
       </motion.h1>
       {/* Title for large screens */}
       <motion.h1
-        className="text-center bigheadline my-4 fw-bold fa-3x"
+        className="text-center bigheadline my-3 fw-bold fa-3x"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -92,22 +92,22 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="ms-lg-5 mt-5 mb-3">
+            <div className="ms-lg-5 lg:mt-5 mb-3">
               <h2 className="fw-bold fa-md-2x">DON'T BE SHY !</h2>
               <p className="lead">Feel free to get in touch with me.</p>
               <div className="d-flex align-items-center mb-3">
                 <i className="fas fa-envelope fa-lg"></i>
                 <div className="ms-3">
-                  <h5 className="text-secondary mb-1">MAIL ME:</h5>
-                  <h6 className="ContactEmail">
-                    mohammedhossam199998@gmail.com
+                  <h5 className="text-secondary max-lg:text-base mb-1">MAIL ME:</h5>
+                  <h6 className="ContactEmail line-clamp-1">
+                    mohammedhossam.dev@gmail.com
                   </h6>
                 </div>
               </div>
               <div className="d-flex align-items-center mb-3">
                 <i className="fas fa-phone fa-lg"></i>
                 <div className="ms-3">
-                  <h5 className="text-secondary mb-1">CALL ME:</h5>
+                  <h5 className="text-secondary mb-1  max-lg:text-base">CALL ME:</h5>
                   <h6>+201125997082</h6>
                 </div>
               </div>
