@@ -30,7 +30,7 @@ export default function NavBar() {
         </div>
       </Link>
       <div className=" ">
-        <GoogleAuthPage />
+        {/* <GoogleAuthPage /> */}
       <ToastContainer />
 
       </div>

@@ -129,7 +129,7 @@ export default function Contact() {
                   <i className="fab fa-github text-white"></i>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/mohammed-hossam-459b68291/"
+                  href="https://www.linkedin.com/in/mohammedfayyad/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-circle d-flex justify-content-center align-items-center mx-2"

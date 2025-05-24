@@ -17,10 +17,13 @@ export default function Projects() {
           id: doc.id,
           title: doc.data().name || "Untitled Project",
           imgSrc: doc.data().url || "default-image-url.jpg",
-          codeLink: doc.data().code || "#",
-          demoLink: doc.data().demo || "#",
+          codeLink: doc.data().code || "",
+          demoLink: doc.data().demo || "",
           description: doc.data().description || "...",
-          best: doc.data().best || false, // Check for 'best' property
+          best: doc.data().best || false, 
+          Images: doc.data().Images || [], 
+          skills: doc.data().skills || [], 
+          video: doc.data().video || "",
         }));
         setProjects(projectsData);
       } catch (error) {
