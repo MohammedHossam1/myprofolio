@@ -4,6 +4,7 @@ import Header from "./Header/Header";
 import NavBar from "./NavBar";
 import Projects from "./Projects/Projects";
 import Skills from "./Skills/Skills";
+import ClipPathEditor from "./VedioText";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <NavBar />
       </section>
       <div className="container ">
+        {/* <ClipPathEditor /> */}
         <section id="header">
           <Header />
         </section>

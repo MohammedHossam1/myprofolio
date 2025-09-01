@@ -70,6 +70,8 @@ export default function Contact() {
 
       >
         GETIN<span className="about-span">TOUCH</span>
+        <div className="text-base">بشوف رسايلك بس مفيش حاجه ابعت عليها</div>
+        <div className="text-base">لا رقم ولا ايميل ولا فيس</div>
       </motion.h1>
       {/* Title for large screens */}
       <motion.h1
@@ -80,6 +82,8 @@ export default function Contact() {
         transition={{ duration: 0.5 }}
       >
         GETIN<span>TOUCH</span>
+        <div className="text-base">بشوف رسايلك بس مفيش حاجه ابعت عليها</div>
+        <div className="text-base">لا رقم ولا ايميل ولا فيس</div>
       </motion.h1>
       {/* Contact Section */}
       <div className="container">

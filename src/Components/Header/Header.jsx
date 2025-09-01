@@ -1,10 +1,13 @@
-    import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import mainImageHover from "../../assets/main-image-hover.jpg";
 import mainImage from "../../assets/main-image.jpg";
 import "./Header.css";
+// import Avatar from "./Avatar";
 export default function Header() {
   const [showMore, setShowMore] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <header className="home  w-100  py-10 xl:h-[90vh]">
       <motion.div
@@ -18,30 +21,40 @@ export default function Header() {
             <div className="opacity-50 d-flex align-items-center">
               <div className="myimgdiv rounded-circle"></div>
             </div>
-            <div className="top-50 cursor-pointer translate-middle-y d-flex position-absolute align-items-center">
-              <div className="myimg  rounded-circle group">
-                <motion.img
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                  src={mainImage}
-                  alt="mohammed hossam profile"
-                  className="object-cover group-hover:hidden object-bottom"
-                  id="myImage"
-                />
-                <motion.img
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                  src={mainImageHover}
-                  alt="mohammed hossam profile"
-                  className="object-cover hidden group-hover:block object-bottom"
-                  id="myImage"
-                />
+            <div className="top-50 cursor-pointer translate-middle-y d-flex position-absolute align-items-center rounded-circle ">
+              <div
+                className="myimg rounded-circle group relative "
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                <AnimatePresence mode="popLayout">
+                  {!isHovered ? (
+                    <motion.img
+                      key="normal"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.1 }}
+                      src={mainImage}
+                      alt="normal image"
+                      className="absolute inset-0 w-full h-full object-cover object-bottom"
+                    />
+                  ) : (
+                    <motion.img
+                      key="hover"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.1 }}
+                      src={mainImageHover}
+                      alt="hover image"
+                      className="absolute inset-0 w-full h-full object-cover object-bottom"
+                    />
+                  )}
+                </AnimatePresence>
               </div>
             </div>
+            {/* <Avatar />/ */}
           </div>
           <div className="col-md-7 col-12 ms-auto p-md-5 ps-3 d-flex justify-content-center flex-column align-items-start text-start text-md-start">
             <h1 className="fw-bold home-h2">
@@ -54,7 +67,7 @@ export default function Header() {
                     duration: 0.5,
                     delay: index * 0.05,
                     type: "spring",
-                    damping: 10
+                    damping: 10,
                   }}
                 >
                   {char}
@@ -68,9 +81,9 @@ export default function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{
                       duration: 0.5,
-                      delay: 1 + (index * 0.05),
+                      delay: 1 + index * 0.05,
                       type: "spring",
-                      damping: 10
+                      damping: 10,
                     }}
                   >
                     {char}
@@ -78,32 +91,40 @@ export default function Header() {
                 ))}
               </span>
             </h1>
-            <motion.p 
+            <motion.p
               className="lh-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 2 }}
             >
-              Iʼm Mohammed Hossam, a Front-End Developer with a strong focus on building user-centered, high
-              performance web applications. Over the past few years, Iʼve contributed to a variety of projects — from
-              responsive dashboards to e-commerce platforms — collaborating closely with designers, back-end
-              developers, and product teams to turn ideas into seamless digital experiences.
+              Iʼm Mohammed Hossam, a Front-End Developer with a strong focus on
+              building user-centered, high performance web applications. Over
+              the past few years, Iʼve contributed to a variety of projects —
+              from responsive dashboards to e-commerce platforms — collaborating
+              closely with designers, back-end developers, and product teams to
+              turn ideas into seamless digital experiences.
               <motion.span
                 initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: showMore ? 1 : 0, height: showMore ? "auto" : 0 }}
+                animate={{
+                  opacity: showMore ? 1 : 0,
+                  height: showMore ? "auto" : 0,
+                }}
                 className="block overflow-hidden"
               >
-                My work goes beyond translating designs into code. I actively contribute to enhancing usability, optimizing 
-                performance, and ensuring accessibility. I enjoy solving real-world problems with clean, maintainable code 
-                and am always striving to grow — both technically and creatively.
-                My goal is to be more than just a developer. I aim to be a team player who bridges the gap between design 
-                and functionality, helping create products that are not only efficient but also delightful to use.
+                My work goes beyond translating designs into code. I actively
+                contribute to enhancing usability, optimizing performance, and
+                ensuring accessibility. I enjoy solving real-world problems with
+                clean, maintainable code and am always striving to grow — both
+                technically and creatively. My goal is to be more than just a
+                developer. I aim to be a team player who bridges the gap between
+                design and functionality, helping create products that are not
+                only efficient but also delightful to use.
               </motion.span>
-              <button 
+              <button
                 onClick={() => setShowMore(!showMore)}
                 className="text-main hover:text-main-dark font-medium mt-2"
               >
-                {showMore ? 'Read Less' : 'Read More'}
+                {showMore ? "Read Less" : "Read More"}
               </button>
             </motion.p>
             <a
@@ -111,7 +132,9 @@ export default function Header() {
               className="bttn ps-3 d-flex justify-content-between rounded-5 align-items-center p-0"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+                document
+                  .getElementById("about")
+                  .scrollIntoView({ behavior: "smooth" });
               }}
             >
               MORE ABOUT ME

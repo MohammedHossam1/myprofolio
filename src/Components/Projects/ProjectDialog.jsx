@@ -55,7 +55,7 @@ export default function ProjectDialog({
                 className="overflow-y-auto"
               >
                 <h2 id="dialog-title" className="text-2xl font-bold mb-3 text-gray-800">{title}</h2>
-                <p className="text-sm md:text-md text-gray-600 mb-2 md:mb-6 md:leading-relaxed  ">{description}</p>
+                <p className="text-xs md:text-md text-gray-600 mb-2 md:mb-6 md:leading-relaxed  ">{description}</p>
                 <div className="flex py-2 gap-2 overflow-x-auto hide-scrollbar " role="list" aria-label="Technologies used">
                   {skills && Array.isArray(skills) ? skills.map((skill, index) => (
                     <motion.span
@@ -92,22 +92,22 @@ export default function ProjectDialog({
                     View Code
                   </motion.a>
                 ) : (
-                  <button className="text-gray-600 cursor-not-allowed flex items-center gap-2" disabled>
-                    <FaGithub size={18} />
+                  <button className="text-gray-600 cursor-not-allowed flex items-center gap-2  max-md:!text-xs" disabled>
+                    <FaGithub size={14} />
                     Private Code
                   </button>
                 )}
 
                 {demoLink && (
                   <motion.a
-                    className="btn !flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg font-medium transition-colors duration-200 !text-black hover:!text-main"
+                    className="btn !flex items-center justify-center gap-2 max-md:!text-xs bg-main hover:bg-indigo-700 rounded-lg font-medium transition-colors duration-200 !text-black hover:!text-main"
                     href={demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <FaExternalLinkAlt size={16} />
+                    <FaExternalLinkAlt size={14} />
                     Live Demo
                   </motion.a>
                 )}
