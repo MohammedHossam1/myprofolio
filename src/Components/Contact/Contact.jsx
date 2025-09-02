@@ -56,7 +56,7 @@ export default function Contact() {
       className="contact my-lg-5  relative"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once:true }}
+      viewport={{ once: true }}
       transition={{ duration: 1 }}
     >
       <ToastContainer />
@@ -66,12 +66,10 @@ export default function Contact() {
         initial={{ opacity: 0, x: 20 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        viewport={{ once:true }}
-
+        viewport={{ once: true }}
       >
         GETIN<span className="about-span">TOUCH</span>
-        <div className="text-base">بشوف رسايلك بس مفيش حاجه ابعت عليها</div>
-        <div className="text-base">لا رقم ولا ايميل ولا فيس</div>
+        <div className="text-sm"> مش مرتبط</div>
       </motion.h1>
       {/* Title for large screens */}
       <motion.h1
@@ -82,8 +80,8 @@ export default function Contact() {
         transition={{ duration: 0.5 }}
       >
         GETIN<span>TOUCH</span>
-        <div className="text-base">بشوف رسايلك بس مفيش حاجه ابعت عليها</div>
-        <div className="text-base">لا رقم ولا ايميل ولا فيس</div>
+        <div className="text-sm"> مش مرتبط</div>
+
       </motion.h1>
       {/* Contact Section */}
       <div className="container">
@@ -102,7 +100,9 @@ export default function Contact() {
               <div className="d-flex align-items-center mb-3">
                 <i className="fas fa-envelope fa-lg"></i>
                 <div className="ms-3">
-                  <h5 className="text-secondary max-lg:text-base mb-1">MAIL ME:</h5>
+                  <h5 className="text-secondary max-lg:text-base mb-1">
+                    MAIL ME:
+                  </h5>
                   <h6 className="ContactEmail line-clamp-1">
                     mohammedhossam.dev@gmail.com
                   </h6>
@@ -111,7 +111,9 @@ export default function Contact() {
               <div className="d-flex align-items-center mb-3">
                 <i className="fas fa-phone fa-lg"></i>
                 <div className="ms-3">
-                  <h5 className="text-secondary mb-1  max-lg:text-base">CALL ME:</h5>
+                  <h5 className="text-secondary mb-1  max-lg:text-base">
+                    CALL ME:
+                  </h5>
                   <h6>+201125997082</h6>
                 </div>
               </div>
