@@ -70,6 +70,7 @@ export default function Contact() {
       >
         GETIN<span className="about-span">TOUCH</span>
         <div className="text-sm">شاكك ف حد ف عشان كدا بسال ؟
+          اخرتها اي هتقولي مين طيب
         </div>
       </motion.h1>
       {/* Title for large screens */}
@@ -82,6 +83,7 @@ export default function Contact() {
       >
         GETIN<span>TOUCH</span>
         <div className="text-sm">شاكك ف حد ف عشان كدا بسال ؟
+          اخرتها اي هتقولي مين طيب
         </div>
 
       </motion.h1>
