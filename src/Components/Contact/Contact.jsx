@@ -69,8 +69,7 @@ export default function Contact() {
         viewport={{ once: true }}
       >
         GETIN<span className="about-span">TOUCH</span>
-        <div className="text-sm">اولا مش مرتبط 
-          ثانيا انا بقول انت مين لو زي منا عايز ك مواصفات مش ان فيه حد ف دماغي 
+        <div className="text-sm">اما تقول انت مين الاول ووعد مني اقولك المواصفات
            </div>
       </motion.h1>
       {/* Title for large screens */}
@@ -82,8 +81,7 @@ export default function Contact() {
         transition={{ duration: 0.5 }}
       >
         GETIN<span>TOUCH</span>
-        <div className="text-sm">اولا مش مرتبط 
-          ثانيا انا بقول انت مين لو زي منا عايز ك مواصفات مش ان فيه حد ف دماغي 
+        <div className="text-sm">اما تقول انت مين الاول ووعد مني اقولك المواصفات
            </div>
 
       </motion.h1>
