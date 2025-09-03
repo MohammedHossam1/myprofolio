@@ -69,9 +69,13 @@ export default function Contact() {
         viewport={{ once: true }}
       >
         GETIN<span className="about-span">TOUCH</span>
-        <div className="text-sm">شاكك ف حد ف عشان كدا بسال ؟
-          اخرتها اي هتقولي مين طيب
-        </div>
+        <div className="text-sm">صعب ان كل شويه اكتب رساله ع الموقع  
+          -مش هقول كنت شاكك ف مين اكيد 
+          - ممكن تقول نت مين وياصابت يا خابت مفيهاش حاجه ان شاء الله
+        -ويعني اي مش هستفاد حاجه 
+        اعمل حساب وهمي علي الفيس ارحم وابعتلي 
+
+           </div>
       </motion.h1>
       {/* Title for large screens */}
       <motion.h1
@@ -82,9 +86,13 @@ export default function Contact() {
         transition={{ duration: 0.5 }}
       >
         GETIN<span>TOUCH</span>
-        <div className="text-sm">شاكك ف حد ف عشان كدا بسال ؟
-          اخرتها اي هتقولي مين طيب
-        </div>
+        <div className="text-sm">صعب ان كل شويه اكتب رساله ع الموقع  
+          -مش هقول كنت شاكك ف مين اكيد 
+          - ممكن تقول نت مين وياصابت يا خابت مفيهاش حاجه ان شاء الله
+        -ويعني اي مش هستفاد حاجه 
+        اعمل حساب وهمي علي الفيس ارحم وابعتلي 
+
+           </div>
 
       </motion.h1>
       {/* Contact Section */}
