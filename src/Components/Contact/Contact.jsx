@@ -69,7 +69,10 @@ export default function Contact() {
         viewport={{ once: true }}
       >
         GETIN<span className="about-span">TOUCH</span>
-<div className="text-sm">خلاص علي الله
+<div className="text-sm">لا الموضوع بسيط انا تمام
+
+
+
 </div>
       </motion.h1>
       {/* Title for large screens */}
@@ -81,7 +84,7 @@ export default function Contact() {
         transition={{ duration: 0.5 }}
       >
         GETIN<span>TOUCH</span>
-<div className="text-sm">علي الله
+<div className="text-sm">انا تمام
 </div>
 
       </motion.h1>
