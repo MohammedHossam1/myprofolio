@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
-import { useRef } from "react";
+import { useRef } from "react"; 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Contact.css";
@@ -69,7 +69,7 @@ export default function Contact() {
         viewport={{ once: true }}
       >
         GETIN<span className="about-span">TOUCH</span>
-<div className="text-sm">تمام
+<div className="text-sm">قلتي براحتك متجاوبش ..بشيلهم من دايرة الشك بالذات قرايبي
 </div>
       </motion.h1>
       {/* Title for large screens */}
@@ -81,7 +81,7 @@ export default function Contact() {
         transition={{ duration: 0.5 }}
       >
         GETIN<span>TOUCH</span>
-<div className="text-sm">تمام
+<div className="text-sm">بشلهم من دايرة الشك
 </div>
 
       </motion.h1>
